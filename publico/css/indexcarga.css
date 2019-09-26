@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .formularios {
     float: none;
     margin-top: 1%;
@@ -48,15 +52,19 @@
 }
 
 #motivoViaje {
-    width: 325px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #sedeViaje {
-    width: 180px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+#tamagnioSede {
+    width: 250px;
 }
 
 #destinoViaje {
@@ -74,7 +82,7 @@
 
 #fechaViaje {
     float: left;
-    width: 200px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 10px;
 }
@@ -86,79 +94,69 @@
 }
 
 #textoBuscarDNI {
+    float: left;
     width: 150px;
     margin-top: 8px;
     margin-left: 15px;
 }
 
-#ubicacionBusqueda {
-    top: -30px;
-    left: 130px;
-}
+#ubicacionBusqueda {}
 
 #busquedaEncargado {
-    width: 200px;
+    float: left;
+    width: 250px;
     margin-bottom: 10px;
 }
 
 #nombreEncargado {
-    top: -30px;
-    width: 200px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #apellidoEncargado {
-    top: -30px;
-    width: 200px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #dniEncargado {
-    top: -30px;
     width: 200px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #direccionEncargado {
-    top: -30px;
     width: 325px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #telefonoEncargado {
-    top: -30px;
     width: 200px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #emailEncargado {
-    top: -30px;
     width: 325px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #grupoSanguineoEncargado {
-    top: -30px;
     width: 180px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #polizaEncargado {
-    top: -30px;
     width: 240px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #observacionEncargado {
-    top: -30px;
     width: 695px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -337,4 +335,8 @@
     font-weight: bold;
     text-decoration: none;
     color: #F00;
+}
+
+color: #F00;
+
 }
