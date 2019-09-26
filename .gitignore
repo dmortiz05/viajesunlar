@@ -1,0 +1,8 @@
+.vagrant/
+vendor/
+after.sh
+aliases
+composer.json
+composer.lock
+Homestead.yaml
+Vagrantfile

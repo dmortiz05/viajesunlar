@@ -1,0 +1,31 @@
+body{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+body::-webkit-scrollbar{
+    width: 14px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(201, 95, 0);
+    border-radius: 40px solid red;  
+}
+
+.data-container,
+.data-table-container{
+    width: 90%;
+    margin: 3% auto;
+}
+.center-button{
+    display: block;
+    margin: 0 auto 10px;
+}
+.obs{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.data-container-background{
+    padding: 10px;
+    border: 2px solid rgba(44, 11, 28, 0.151);
+    border-radius: 10px;
+}
