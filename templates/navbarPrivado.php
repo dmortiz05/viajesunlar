@@ -1,7 +1,10 @@
   <div class="navbar-brand">
     <a class="" href="/privado/logistica/index.php">
-      <img src="https://www.unlar.edu.ar/images/UNLaR_Horizontal.png" class="nav-logo">
+    <div id="logo">
+      <img src="../../publico/img/UNLaR_Horizontal.png">
+</div>
     </a>
+
 
     <a role="button" class="navbar-burger burger burger-heigth" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true" class="hamburguesa-item"></span>
