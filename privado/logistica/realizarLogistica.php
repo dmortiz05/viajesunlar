@@ -116,5 +116,8 @@
                     <button class="button is-info is-rounded center-button">Registrar</button>
             </form>
     </div>
+    </div>
+    <script src="../../publico/js/nav.js">
+    </script>
 </body>
 </html>

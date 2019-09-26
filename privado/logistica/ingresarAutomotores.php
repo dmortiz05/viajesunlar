@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <label for="">Proxmo service
+                            <label for="">Próximo service
                                 <input class="item-input input is-info" type="date" placeholder="Vencimiento" required>
                             </label> 
                         </div>  
@@ -97,5 +97,8 @@
                     <button class="button is-info is-rounded center-button">Registrar</button>
             </form>
     </div>
+    </div>
+    <script src="../../publico/js/nav.js">
+    </script>
 </body>
 </html>

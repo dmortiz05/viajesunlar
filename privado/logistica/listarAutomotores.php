@@ -36,6 +36,8 @@
     <div class="container-grid">
         <div class="menu menu-container-max">
             <?php require "../../templates/dashboard.php"?>
+            <?php require_once "../logisticas/dbconexion.php";?>
+            <?php require_once "../logisticas/ordenarautomotores.php";?>
         </div>
         <div class="data-table-container">
                 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -51,7 +53,7 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        <?php require_once "../logisticas/listadoautomotores.php";?>
                     </tbody>
                 </table>
         </div>

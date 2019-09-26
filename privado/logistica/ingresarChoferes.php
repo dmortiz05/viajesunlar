@@ -88,7 +88,7 @@ require '../logisticas/cabeceravalidarchoferes.php';
                             <input class="item-input input is-info" type="text" name="licencia" placeholder="Licencia" required>-->
                             <input class="item-input input is-info" type="text" name="polizaseguro" placeholder="Póliza de seguro">
                             <input class="item-input input is-info" type="text" name="licencia" placeholder="Licencia">
-                            <label for="">Fecha Vencimiento
+                            <label for="">Fecha Vencimiento Licencia
                                 <!--<input class="item-input input is-info" type="date" name="vencimientocarnet" placeholder="Vencimiento" required>-->
                                 <input class="item-input input is-info" type="date" name="vencimientocarnet" placeholder="Vencimiento">
                             </label> 
