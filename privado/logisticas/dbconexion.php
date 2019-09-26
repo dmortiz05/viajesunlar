@@ -5,4 +5,4 @@
 			printf("Error de conexion: %s\n", mysqli_connect_error());
 			exit();
 			$link->set_charset(utf8_general_ci);
-		}?>
+		}?> xcv
