@@ -94,17 +94,15 @@ body {
 }
 
 #textoBuscarDNI {
-    float: left;
     width: 150px;
     margin-top: 8px;
     margin-left: 15px;
 }
 
-#ubicacionBusqueda {}
-
 #busquedaEncargado {
     float: left;
     width: 250px;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 
@@ -121,43 +119,47 @@ body {
 }
 
 #dniEncargado {
-    width: 200px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #direccionEncargado {
-    width: 325px;
+    width: 377px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #telefonoEncargado {
-    width: 200px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #emailEncargado {
-    width: 325px;
+    width: 377px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #grupoSanguineoEncargado {
-    width: 180px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
+#tamagnioGrupoSanguineo {
+    width: 250px;
+}
+
 #polizaEncargado {
-    width: 240px;
+    width: 250px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 #observacionEncargado {
-    width: 695px;
+    width: 760px;
     margin-top: 5px;
     margin-bottom: 5px;
 }

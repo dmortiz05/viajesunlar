@@ -59,30 +59,35 @@
 		<div>
 			<h2 id="titulo"> Datos del Encargado</h2>
 			<div class ="formularios">
-				<form name="datosDelEncargado">
-				<div>
+		
 					<p id="textoBuscarDNI">Buscar por DNI:</p>
-					<div id="ubicacionBusqueda"class="control has-icons-left has-icons-right">
+					<div class="control has-icons-left has-icons-right">
 						<input id="busquedaEncargado" class="item-input input is-info" type="text" placeholder="Buscar por DNI" >
 						<span class="icon is-left">
 							<i class="fas fa-search"></i>
 						</span>
 					</div>
-				</div>		
+			
+
+			
+				<form name="datosDelEncargado">
+				
+				<p id="textoBuscarDNI">Datos:</p>
+				
 					<input id="nombreEncargado" class="item-input input is-info" name="nombreEncargado" type="text" placeholder="Nombre" maxlength="30" required title="Campo Obligatorio" required>
 			
 					<input id="apellidoEncargado" class="item-input input is-info" name="apellidoEncargado" type="text" placeholder="Apellido" maxlength="30" title="Campo Obligatorio" required>
 
 					<input id="dniEncargado" class="item-input input is-info" name="dniencargado" type="text" placeholder="DNI" maxlength="30" required pattern="[0-9]{8}" minlength="1" maxlength="8">
 					
-					<input id="direccionEncargado" class="item-input input is-info" type="text" name="direccionEncargado" placeholder="Dirección" maxlength="100"title="Campo Obligatorio" required>
-
 					<input id="telefonoEncargado" class="item-input input is-info" type="tel" name="telefonoEncargado" placeholder="Teléfono" maxlength="30" title="Campo Obligatorio" attern="[0-9]{10}" minlength="1" maxlength="10" required>
+
+					<input id="direccionEncargado" class="item-input input is-info" type="text" name="direccionEncargado" placeholder="Dirección" maxlength="100"title="Campo Obligatorio" required>
 
 					<input id="emailEncargado" class="item-input input is-info" type="email" name="emailEncargado" placeholder="Email" maxlength="30" title="Campo Obligatorio" required>
 
 					<div id="grupoSanguineoEncargado" class="item-input select is-info" maxlength="3" title="Campo Obligatorio" required>
-						<select  class="is-hovered" name="grupoSanguineoEncargado" id="grup">
+						<select  id="tamagnioGrupoSanguineo"class="is-hovered" name="grupoSanguineoEncargado" id="grup">
 								<option>Grupo Sanguineo</option>
 								<option value="0-">0-</option>
 								<option value="0+">0+</option>
@@ -148,6 +153,8 @@
 		<a href="javascript:sentencia_javascript_para_abrir_la_ventana">
 			<h2 id="titulo"> Agregar Pasajeros </h2>
 			<div>
+
+
 				<p><a id="agregarAlumno" href="#popupAlumno" class="button is-rounded estilo">Alumno/Graduado</a></p>
 				<div id="popupAlumno" class="overlay">
 					<div id="popupBody">
@@ -307,8 +314,6 @@
 		    <div id="botton2"> <a id="agregar2" class="button is-rounded">Enviar Solicitud del Viaje</a> </div>
 
 		     <?php require_once "../../templates/footer.php" ?>
-		     <script src="../../publico/js/app.js"></script>
-			 <script src="../../publico/js/bQuitar.js"></script>
 		
 	</body>
 </html>
