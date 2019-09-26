@@ -30,8 +30,8 @@
 
 					<input  id="motivoViaje" class="item-input input is-info"  name="motivoViaje" placeholder="Motivo del Viaje" type="text" maxlength="" title="Campo Obligatorio" required>
 
-						<div id="sedeViaje" class="item-input select is-info">
-							<select class="is-hovered" name="sedeUni" placeholder="Sede Universitaria" title="Campo Obligatorio" required>
+						<div id="sedeViaje" class="select is-info">
+							<select id="tamagnioSede" class="is-hovered" name="sedeUni" placeholder="Sede Universitaria" title="Campo Obligatorio" required>
 									<option value="Aimogasta">Sede Aimogasta</option>
 									<option value="Capital">Sede Capital</option>
 									<option value="Catuna">Sede Catuna</option>
@@ -60,15 +60,15 @@
 			<h2 id="titulo"> Datos del Encargado</h2>
 			<div class ="formularios">
 				<form name="datosDelEncargado">
+				<div>
 					<p id="textoBuscarDNI">Buscar por DNI:</p>
-					
 					<div id="ubicacionBusqueda"class="control has-icons-left has-icons-right">
 						<input id="busquedaEncargado" class="item-input input is-info" type="text" placeholder="Buscar por DNI" >
 						<span class="icon is-left">
 							<i class="fas fa-search"></i>
 						</span>
 					</div>
-							
+				</div>		
 					<input id="nombreEncargado" class="item-input input is-info" name="nombreEncargado" type="text" placeholder="Nombre" maxlength="30" required title="Campo Obligatorio" required>
 			
 					<input id="apellidoEncargado" class="item-input input is-info" name="apellidoEncargado" type="text" placeholder="Apellido" maxlength="30" title="Campo Obligatorio" required>
