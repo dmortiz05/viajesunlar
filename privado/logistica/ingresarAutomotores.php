@@ -52,15 +52,14 @@
                                 <div class="control">
                                     <div class="select is-info">
                                     <select required>
-                                        <option>Tipo</option>
-                                        <option value="0-">3-</option>
-                                        <option value="0+">0+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="A+">A+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="AB-">AB-</option>
-                                        <option value="AB+">AB+</option>
+                                        <option value="" disabled selected>Tipo</option>
+                                        <option value="CAMIÓN">Camión</option>
+                                        <option value="COMBI">Combi</option>
+                                        <option value="MINIBUS">Minibus</option>
+                                        <option value="ÓMNIBUS">Ómnibus</option>
+                                        <option value="PICK-UP">Pick-Up</option>
+                                        <option value="SEDAN">Sedan</option>
+                                        <option value="UTILITARIO">Utilitario</option>
                                     </select>
                                     </div>
                                 </div>
@@ -69,15 +68,12 @@
                                 <div class="control" >
                                     <div class="select is-info" >
                                         <select required>
-                                            <option>Sede</option>
-                                            <option value="0-">3-</option>
-                                            <option value="0+">0+</option>
-                                            <option value="A-">A-</option>
-                                            <option value="A+">A+</option>
-                                            <option value="B-">B-</option>
-                                            <option value="B+">B+</option>
-                                            <option value="AB-">AB-</option>
-                                            <option value="AB+">AB+</option>
+                                            <option value="" disabled selected>Sede</option>
+                                            <option value="Capital">Capital</option>
+                                            <option value="Aimogasta">Aimogasta</option>
+                                            <option value="Catuna">Catuna</option>
+                                            <option value="Chepes">Chepes</option>
+                                            <option value="Villa Unión ">Villa Unión</option>
                                         </select>
                                     </div>
                                 </div>

@@ -1,10 +1,10 @@
 
 		<form action="">
-			<h2>Login</h2>	
+			<h2>Iniciar Sesión</h2>	
 				
 				<div class="field">
 				  <p class="control has-icons-left has-icons-right">
-				    <input class="input" type="text" placeholder="User">
+				    <input class="input" type="text" placeholder="Usuario">
 				    <span class="icon is-small is-left">
 				      <i class="fas fa-user"></i>
 				    </span>
@@ -15,7 +15,7 @@
 				</div>
 				<div class="field">
 				  <p class="control has-icons-left">
-				    <input class="input" type="password" placeholder="Password">
+				    <input class="input" type="password" placeholder="Contraseña">
 				    <span class="icon is-small is-left">
 				      <i class="fas fa-lock"></i>
 				    </span>

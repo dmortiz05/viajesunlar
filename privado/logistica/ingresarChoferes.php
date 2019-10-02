@@ -66,7 +66,7 @@ require '../logisticas/cabeceravalidarchoferes.php';
                                     <div class="select is-info">
                                     <!--<select id="gruposanguineo" name="gruposanguineo" class="form-control" required>-->
                                     <select id="gruposanguineo" name="gruposanguineo" class="form-control select-notfirst">
-                                        <option value="vacio">Grupo Sanguíneo</option>
+                                        <option value="" disabled selected>Grupo Sanguíneo</option>
                                         <option value="0-">0-</option>
                                         <option value="0+">0+</option>
                                         <option value="A-">A-</option>

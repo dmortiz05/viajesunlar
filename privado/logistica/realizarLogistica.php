@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../publico/css/styleNavDash.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9c18248300.js"></script>
-    <title>Logistica</title>
+    <title>Logística</title>
 </head>
 <body>
     <nav class="navbar nav-bar" role="navigation" aria-label="main navigation">
@@ -41,8 +41,8 @@
             <div class="data-container-background">
                     <fieldset class="" > DATOS VIAJE
                         <div class="container-grid-form">
-                            <input class="item-input input is-info" type="text" placeholder="Codigo expediente" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
-                            <input class="item-input input is-info" type="text" placeholder="Numero orden" required>
+                            <input class="item-input input is-info" type="text" placeholder="Código expediente" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
+                            <input class="item-input input is-info" type="text" placeholder="Número orden" required>
                             <input class="item-input input is-info" type="text" placeholder="Destino provincia" required>
                             <input class="item-input input is-info" type="text" placeholder="Destino localidad" required>
                             <input class="item-input input is-info" type="text" placeholder="Sede origen" required>
@@ -79,7 +79,7 @@
                             <input class="item-input input is-info" type="number" placeholder="Lavado" required>
                             <input class="item-input input is-info" type="number" placeholder="Peaje" required>
                             <input class="item-input input is-info" type="number" placeholder="Estacionamiento" required>
-                            <input class="item-input input is-info" type="number" placeholder="Viaticos" required>
+                            <input class="item-input input is-info" type="number" placeholder="Viáticos" required>
                         </div>
                     </fieldset> 
                     <div class="field obs">
@@ -92,7 +92,7 @@
             <div class="data-container-background">
                     <fieldset class="" >EVENTO
                         <div class="container-grid-form">
-                            <input class="item-input input is-info" type="text" placeholder="Titulo" required>
+                            <input class="item-input input is-info" type="text" placeholder="Título" required>
                             <input class="item-input input is-info" type="text" placeholder="Finalidad del evento" required>
                             <label for="">Fecha inicio
                                 <input class="item-input input is-info" type="date" placeholder="Vencimiento" required>
@@ -104,7 +104,7 @@
                     </fieldset>
                     <div class="field obs">
                         <div class="control">
-                            <textarea class="textarea is-info" placeholder="Descripcion del evento"></textarea>
+                            <textarea class="textarea is-info" placeholder="Descripción del evento"></textarea>
                         </div>
                     </div> 
                     <div class="field obs">
@@ -113,6 +113,7 @@
                         </div>
                     </div>
             </div>
+            <br>
                     <button class="button is-info is-rounded center-button">Registrar</button>
             </form>
     </div>
