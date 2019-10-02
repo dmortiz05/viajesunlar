@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../publico/css/normalize.css">
     <link rel="stylesheet" href="../../publico/css/styleElements.css">
     <link rel="stylesheet" href="../../publico/css/styleNavDash.css">
+    <link rel="stylesheet" href="../../publico/css/logistica.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9c18248300.js"></script>
     <title>Logistica</title>
@@ -50,30 +51,35 @@
                         <div class="container-grid-form">
                             <div class="item-input field">
                                 <div class="control">
-                                    <div class="select is-info">
-                                    <select required>
-                                        <option value="" disabled selected>Tipo</option>
-                                        <option value="CAMIÓN">Camión</option>
-                                        <option value="COMBI">Combi</option>
-                                        <option value="MINIBUS">Minibus</option>
-                                        <option value="ÓMNIBUS">Ómnibus</option>
-                                        <option value="PICK-UP">Pick-Up</option>
-                                        <option value="SEDAN">Sedan</option>
-                                        <option value="UTILITARIO">Utilitario</option>
-                                    </select>
+                                    <div id="tipoAutomotor" class="select is-info">
+                                        <select id="tamanioTipoAutomotor" required>
+                                            <option value="" disabled selected hidden>Tipo</option>
+                                            <option value="CAMIÓN">Camión</option>
+                                            <option value="COMBI">Combi</option>
+                                            <option value="MINIBUS">Minibus</option>
+                                            <option value="ÓMNIBUS">Ómnibus</option>
+                                            <option value="PICK-UP">Pick-Up</option>
+                                            <option value="SEDAN">Sedan</option>
+                                            <option value="UTILITARIO">Utilitario</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="item-input field">
-                                <div class="control" >
-                                    <div class="select is-info" >
-                                        <select required>
-                                            <option value="" disabled selected>Sede</option>
+                                <div class="control">
+                                    <div id="sedeAutomotor" class="select is-info">
+                                        <select id="tamanioSedeAutomotor" required>
+                                            <option value="" disabled selected hidden>Sede</option>
                                             <option value="Capital">Capital</option>
                                             <option value="Aimogasta">Aimogasta</option>
                                             <option value="Catuna">Catuna</option>
+                                            <option value="Chamical">Chamical</option>
                                             <option value="Chepes">Chepes</option>
+                                            <option value="Olta">Olta</option>
+                                            <option value="Tama">Tama</option>
+                                            <option value="Ulapes">Ulapes</option>
                                             <option value="Villa Unión ">Villa Unión</option>
+                                            <option value="Vinchina">Vinchina</option>
                                         </select>
                                     </div>
                                 </div>
@@ -90,7 +96,7 @@
                         </div>
                     </div>
 
-                    <button class="button is-info is-rounded center-button">Registrar</button>
+                    <button class="button is-info is-rounded center-button" name="submit" id="submit">Registrar</button>
             </form>
     </div>
     </div>

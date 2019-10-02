@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../publico/css/normalize.css">
     <link rel="stylesheet" href="../../publico/css/styleElements.css">
     <link rel="stylesheet" href="../../publico/css/styleNavDash.css">
+    <link rel="stylesheet" href="../../publico/css/logistica.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="icon" href="https://graduados.unlar.edu.ar/wp-content/uploads/2018/04/cropped-escudo_unlar.png">
     <script src="https://kit.fontawesome.com/9c18248300.js"></script>
@@ -63,10 +64,10 @@ require '../logisticas/cabeceravalidarchoferes.php';
                             <input class="item-input input is-info" type="text" name="telefono" placeholder="Teléfono">
                             <div class="item-input field">
                                 <div class="control">
-                                    <div class="select is-info">
+                                    <div id="gruposanguineoChoferes" class="select is-info">
                                     <!--<select id="gruposanguineo" name="gruposanguineo" class="form-control" required>-->
                                     <select id="gruposanguineo" name="gruposanguineo" class="form-control select-notfirst">
-                                        <option value="" disabled selected>Grupo Sanguíneo</option>
+                                        <option value="" disabled selected hidden>Grupo Sanguíneo</option>
                                         <option value="0-">0-</option>
                                         <option value="0+">0+</option>
                                         <option value="A-">A-</option>
@@ -101,7 +102,7 @@ require '../logisticas/cabeceravalidarchoferes.php';
                         </div>
                     </div>
 
-                    <button class="button is-info is-rounded center-button" name="submit" id="submit" >Registrar</button>
+                    <button class="button is-info is-rounded center-button" name="submit" id="submit">Registrar</button>
             </form>
     </div>
     <script src="../../publico/js/nav.js">

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../publico/css/normalize.css">
     <link rel="stylesheet" href="../../publico/css/styleElements.css">
     <link rel="stylesheet" href="../../publico/css/styleNavDash.css">
+    <link rel="stylesheet" href="../../publico/css/logistica.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9c18248300.js"></script>
     <title>Logistica</title>
@@ -52,7 +53,7 @@
                         </div>
                     </div>
 
-                    <button class="button is-info is-rounded center-button">Registrar</button>
+                    <button class="button is-info is-rounded center-button" name="submit" id="submit">Registrar</button>
             </form>
     </div>
     </div>
