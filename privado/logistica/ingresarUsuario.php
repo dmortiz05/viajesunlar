@@ -36,7 +36,8 @@
     </nav>
     <div class="container-grid">
         <div class="menu menu-container-max">
-            <?php require "../../templates/dashboard.php"?>
+            <?php require "../../templates/dashboard.php";?>
+            <?php require_once "../logisticas/dbconexion.php";?>
         </div>
         <form action="" class="data-container">
                     <fieldset class="data-container-background">DATOS DE LA CUENTA

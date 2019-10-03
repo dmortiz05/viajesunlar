@@ -1,6 +1,5 @@
 <?php
 		$link = mysqli_connect("localhost","php_parque","AutoParque.1920","php_parque");
-		//$idchofer=$_POST["idchofer"];
 		$dni=$_POST["dni"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];

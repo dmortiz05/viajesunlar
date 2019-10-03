@@ -37,13 +37,14 @@
     <div class="container-grid">
         <div class="menu menu-container-max">
             <?php require "../../templates/dashboard.php"?>
+            <?php require_once "../logisticas/dbconexion.php";?>
         </div>
-        <form action="" class="data-container">
+        <form method="post" action="../logisticas/cargaautomotores.php" role="form" class="data-container">
                     <fieldset class="data-container-background">DATOS DEL AUTOMOTOR
                         <div class="container-grid-form">
-                            <input class="item-input input is-info" type="text" placeholder="Patente" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
-                            <input class="item-input input is-info" type="text" placeholder="Marca" required>
-                            <input class="item-input input is-info" type="text" placeholder="Modelo" required>
+                            <input class="item-input input is-info" type="text" name="patente" placeholder="Patente" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
+                            <input class="item-input input is-info" type="text" name="marca" placeholder="Marca" required>
+                            <input class="item-input input is-info" type="text" name="modelo" placeholder="Modelo" required>
                         </div>
                     </fieldset>
                     <br>
@@ -51,7 +52,7 @@
                         <div class="container-grid-form">
                             <div class="item-input field">
                                 <div class="control">
-                                    <div id="tipoAutomotor" class="select is-info">
+                                    <div id="tipoAutomotor" name="tipo" class="select is-info">
                                         <select id="tamanioTipoAutomotor" required>
                                             <option value="" disabled selected hidden>Tipo</option>
                                             <option value="CAMIÓN">Camión</option>
@@ -67,7 +68,7 @@
                             </div>
                             <div class="item-input field">
                                 <div class="control">
-                                    <div id="sedeAutomotor" class="select is-info">
+                                    <div id="sedeAutomotor" name="sede" class="select is-info">
                                         <select id="tamanioSedeAutomotor" required>
                                             <option value="" disabled selected hidden>Sede</option>
                                             <option value="Capital">Capital</option>
@@ -85,14 +86,14 @@
                                 </div>
                             </div>
                             <label for="">Próximo service
-                                <input class="item-input input is-info" type="date" placeholder="Vencimiento" required>
+                                <input class="item-input input is-info" type="date" name="proximoservice" placeholder="Vencimiento" required>
                             </label> 
                         </div>  
                     </fieldset>
                     <br>
                     <div class="field obs data-container-background">
                         <div class="control">
-                            <textarea class="textarea is-info" placeholder="Observaciones"></textarea>
+                            <textarea class="textarea is-info" name="observaciones" placeholder="Observaciones"></textarea>
                         </div>
                     </div>
 
