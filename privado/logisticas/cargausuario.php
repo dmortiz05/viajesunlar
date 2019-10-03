@@ -1,20 +1,13 @@
 <?php
 		$link = mysqli_connect("localhost","php_parque","AutoParque.1920","php_parque");
-		$patente=$_POST["patente"];
-		$marca=$_POST["marca"];
-		$modelo=$_POST["modelo"];
-		$tipo=$_POST["tipo"];
-		$proximoservice=$_POST["proximoservice"];
-		$sede=$_POST["sede"];
+		$nickname=$_POST["nickname"];
+		$contrasenia=$_POST["contrasenia"];
 		$observaciones=$_POST["observaciones"];
 
-		$query = "INSERT INTO `automotor`(
-		`patente`,`marca`, `modelo` , `tipo`, 
-		`proximoservice`, `sede`, `observaciones`) 
+		$query = "INSERT INTO `usuario`(
+		`nickname`,`contrasenia`, `observaciones`) 
 
-		VALUES ('$patente', '$marca','$modelo', '$_POST[tipo]', 
-		'$proximoservice', '$_POST[sede]', '$observaciones'
-		);
+		VALUES ('$nickname', '$contrasenia', '$observaciones');
 		";
 		mysqli_query($link, $query);
 		header("Location: ../logistica/ingresarUsuario.php");

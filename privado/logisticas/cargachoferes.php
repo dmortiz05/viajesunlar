@@ -18,8 +18,7 @@
 
 		VALUES ('$dni', '$nombre','$apellido', '$direccion', 
 		'$telefono', '$_POST[gruposanguineo]', '$polizaseguro', 
-		'$licencia', '$vencimientocarnet', '$observaciones'
-		);
+		'$licencia', '$vencimientocarnet', '$observaciones');
 		";
 		mysqli_query($link, $query);
 		header("Location: ../logistica/ingresarChoferes.php");

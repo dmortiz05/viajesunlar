@@ -39,18 +39,17 @@
             <?php require "../../templates/dashboard.php";?>
             <?php require_once "../logisticas/dbconexion.php";?>
         </div>
-        <form action="" class="data-container">
+        <form method="post" action="../logisticas/cargausuario.php" role="form" class="data-container">
                     <fieldset class="data-container-background">DATOS DE LA CUENTA
                         <div class="container-grid-form">
-                            <input class="item-input input is-info" type="text" placeholder="Encargado" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
-                            <input class="item-input input is-info" type="text" placeholder="Usuario" required>
-                            <input class="item-input input is-info" type="text" placeholder="Contraseña" required>
+                            <input class="item-input input is-info" type="text" name="nickname" placeholder="Usuario" required>
+                            <input class="item-input input is-info" type="text" name="contrasenia" placeholder="Contraseña" required>
                         </div>
                     </fieldset>
                     <br>
                     <div class="field obs data-container-background">
                         <div class="control">
-                            <textarea class="textarea is-info" placeholder="Observaciones"></textarea>
+                            <textarea class="textarea is-info" name="observaciones" placeholder="Observaciones"></textarea>
                         </div>
                     </div>
 

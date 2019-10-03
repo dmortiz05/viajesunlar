@@ -21,10 +21,10 @@
 </head>
 <body>
     <nav class="navbar nav-bar" role="navigation" aria-label="main navigation">
-        <?php require_once "../../templates/navbarPrivado.php"?>
+        <?php require_once "../../templates/navbarPrivado.php";?>
         <div id="navbarBasicExample" class="navbar-menu">
             <aside class="menu menu-container-min">
-                <?php require_once"../../templates/dashboard.php"?>
+                <?php require_once "../../templates/dashboard.php";?>
             </aside>
             <div class="navbar-end" style="background: rgba(44, 11, 28, 0.151);">
                 <div class="navbar-item" style=" width:100%;">
@@ -53,6 +53,8 @@
                             <th>Licencia</th>
                             <th>Fecha Ven.</th>
                             <th>Observaciones</th>
+                            <th id="tamanioIconos"></th>
+                            <th id="tamanioIconos"></th>
                         </tr>
                     </thead>
                     <tbody>
