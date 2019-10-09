@@ -10,5 +10,5 @@
 		VALUES ('$nickname', '$contrasenia', '$observaciones');
 		";
 		mysqli_query($link, $query);
-		header("Location: ../logistica/ingresarUsuario.php");
+		header("Location: ../../frontend/ingresarUsuario.php");
 ?>

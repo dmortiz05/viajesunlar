@@ -37,12 +37,12 @@
     <div class="container-grid">
         <div class="menu menu-container-max">
             <?php require "../../templates/dashboard.php"?>
-            <?php require_once "../logisticas/dbconexion.php";?>
+            <?php require_once "../backend/dbconexion.php";?>
         </div>
-        <form method="post" action="../logisticas/cargaautomotores.php" role="form" class="data-container">
+        <form method="post" action="../backend/automotores/cargaautomotores.php" role="form" class="data-container">
                     <fieldset class="data-container-background">DATOS DEL AUTOMOTOR
                         <div class="container-grid-form">
-                            <input class="item-input input is-info" type="text" name="patente" placeholder="Patente" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
+                            <input class="item-input input is-info" type="text" name="patente" placeholder="Patente" minlength="1" maxlength="8" >
                             <input class="item-input input is-info" type="text" name="marca" placeholder="Marca" required>
                             <input class="item-input input is-info" type="text" name="modelo" placeholder="Modelo" required>
                         </div>

@@ -25,10 +25,6 @@
 </head>
 <body>
 
-<?php
-require '../logisticas/cabeceravalidarchoferes.php'; 
-?>
-
 <nav class="navbar nav-bar" role="navigation" aria-label="main navigation">
         <?php require_once "../../templates/navbarPrivado.php";?>
         <div id="navbarBasicExample" class="navbar-menu">
@@ -45,9 +41,9 @@ require '../logisticas/cabeceravalidarchoferes.php';
     <div class="container-grid">
         <div class="menu menu-container-max">
             <?php require "../../templates/dashboard.php";?>
-            <?php require_once "../logisticas/dbconexion.php";?>
+            <?php require_once "../backend/dbconexion.php";?>
         </div>
-        <form method="post" action="../logisticas/cargachoferes.php" role="form" class="data-container">
+        <form method="post" action="../backend/choferes/cargachoferes.php" role="form" class="data-container">
                     <fieldset class="data-container-background">DATOS PERSONALES
                         <div class="container-grid-form">
                             <!--<input class="item-input input is-info" type="text" name="dni" placeholder="DNI" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
@@ -57,6 +53,7 @@ require '../logisticas/cabeceravalidarchoferes.php';
                             <input class="item-input input is-info" type="text" name="direccion" placeholder="Dirección" required>
                             <input class="item-input input is-info" type="text" name="telefono" placeholder="Teléfono" pattern="[0-9]{10}" minlength="1" maxlength="10" required>-->
                             <input class="item-input input is-info" type="text" name="dni" placeholder="DNI" >
+                            <span class="text-danger"><?php print("Ingrese DNI") ; ?> </span>
                             <input class="item-input input is-info" type="text" name="apellido" placeholder="Apellido">
                             <input class="item-input input is-info" type="text" name="nombre" placeholder="Nombre">
                       
@@ -66,17 +63,17 @@ require '../logisticas/cabeceravalidarchoferes.php';
                                 <div class="control">
                                     <div id="gruposanguineoChoferes" class="select is-info">
                                     <!--<select id="gruposanguineo" name="gruposanguineo" class="form-control" required>-->
-                                    <select id="gruposanguineo" name="gruposanguineo" class="form-control select-notfirst">
-                                        <option value="" disabled selected hidden>Grupo Sanguíneo</option>
-                                        <option value="0-">0-</option>
-                                        <option value="0+">0+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="A+">A+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="AB-">AB-</option>
-                                        <option value="AB+">AB+</option>
-                                    </select>
+                                        <select id="gruposanguineo" name="gruposanguineo" class="form-control select-notfirst">
+                                            <option value="" disabled selected hidden>Grupo Sanguíneo</option>
+                                            <option value="0-">0-</option>
+                                            <option value="0+">0+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="A+">A+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="AB+">AB+</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

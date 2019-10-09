@@ -16,7 +16,55 @@
 		<link rel="stylesheet" type="text/css" href="../../publico/css/footer.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#open').on('click', function(){
+					$('#popup').fadeIn('slow');
+					$('.popup-overlay').fadeIn('slow');
+					$('.popup-overlay').height($(window).height());
+					return false;
+				});
+			
+				$('#close').on('click', function(){
+					$('#popup').fadeOut('slow');
+					$('.popup-overlay').fadeOut('slow');
+					return false;
+				});
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+				$('#open2').on('click', function(){
+					$('#popup2').fadeIn('slow');
+					$('.popup-overlay2').fadeIn('slow');
+					$('.popup-overlay2').height($(window).height());
+					return false;
+				});
+			
+				$('#close2').on('click', function(){
+					$('#popup2').fadeOut('slow');
+					$('.popup-overlay2').fadeOut('slow');
+					return false;
+				});
+			});
+		</script>
+		<script>
+			$(document).ready(function(){
+				$('#open3').on('click', function(){
+					$('#popup3').fadeIn('slow');
+					$('.popup-overlay3').fadeIn('slow');
+					$('.popup-overlay3').height($(window).height());
+					return false;
+				});
+			
+				$('#close3').on('click', function(){
+					$('#popup3').fadeOut('slow');
+					$('.popup-overlay3').fadeOut('slow');
+					return false;
+				});
+			});
+		</script>
 	</head>
 
 	<body>
@@ -149,20 +197,23 @@
 			</div>
 		</div>
 
-		<div>
-		<a href="javascript:sentencia_javascript_para_abrir_la_ventana">
-			<h2 id="titulo"> Agregar Pasajeros </h2>
 			<div>
 
+				<h2 id="titulo">Datos Pasajero</h2>
+				<div><button id="open">Agregar Alumno o Graduado</button></div>
+				<div><button id="open2">Agregar Docente o No Docente </button></div>
+				<div><button id="open3">Agregar Otros </button></div>
 
-				<p><a id="agregarAlumno" href="#popupAlumno" class="button is-rounded estilo">Alumno/Graduado</a></p>
-				<div id="popupAlumno" class="overlay">
-					<div id="popupBody">
-						<h2 id="subtitulo">Agregar Alumno o Graduado</h2>
-						<a id="cerrar" href="#">&times;</a>
-							<div class="popupContent">
+				<div id="popup" style="display: none;">
+					<div class="content-popup">
+						<div class="close"><a href="#" id="close"><i class="far fa-times-circle"></i></a></div>
+						<div>
+						<div id="popupBody">
+						<h2 id="subtitulo"> Alumno o Graduado</h2>
+
+							<div>
 								<div>
-									<p id="textoBuscarDNI">Buscar por Matricula:</p>
+									<p id="textoBuscarMatricula">Buscar por Matricula:</p>
 									<input id="busquedaAlumno" class="item-input input is-info" type="text" placeholder="Código Matricula" >	
 									<input id="busquedaAlumno2" class="item-input input is-info" type="text" placeholder="Número Matricula" >
 								</div>
@@ -173,16 +224,12 @@
 
 								<input id="dniPasajeroAlumno" class="item-input input is-info" name="dniPasajero" type="text" placeholder="DNI" maxlength="30" title="Campo Obligatorio" required>
 
-								<input id="direccionPasajeroAlumno"  class="item-input input is-info" name="direccionPasajero" type="text" placeholder="Dirección" maxlength="100" pattern="[0-9]{8}" minlength="1" maxlength="8" title="Campo Obligatorio" required> 
-
 								<input id="telefonoPasajeroAlumno"  class="item-input input is-info" type="tel" name="telefonoPasajero" placeholder="Teléfono" pattern="[0-9]{10}" minlength="1" maxlength="10" title="Campo Obligatorio" required>
-							
-								<input id="codigoMatriculaPasajeroAlumno" class="item-input input is-info" type="text" name="codMatriculaPasajero" placeholder="Código Matrícula" maxlength="10" title="Campo Obligatorio" required>
-
-								<input id= "numeroMatriculaPasajeroAlumno" class="item-input input is-info" name="numMatriculaPasajero" type="text" placeholder="Número Matrícula" maxlength="10" title="Campo Obligatorio" required>
-
+								
+								<input id="direccionPasajeroAlumno"  class="item-input input is-info" name="direccionPasajero" type="text" placeholder="Dirección" maxlength="100" pattern="[0-9]{8}" minlength="1" maxlength="8" title="Campo Obligatorio" required> 
+								
 								<div  id="grupoSanguineoAlumno" class="item-input select is-info" required>
-									<select class="is-hovered" name="grupoSanguineoPasajero">
+									<select id="tamanioGrupoSanguineoAlumno"class="is-hovered" name="grupoSanguineoPasajero">
 											<option>Grupo Sanguineo</option>
 											<option value="0-">0-</option>
 											<option value="0+">0+</option>
@@ -197,43 +244,48 @@
 
 								<input id="polizaPasajeroAlumno" class="item-input input is-info" type="text" name="polizaPasajero" placeholder="Número de Poliza" maxlength="10" title="Campo Obligatorio" required>
 
-								<input id="observacionPasajeroAlumno" class="item-input input is-info" type="text" name="observionesPasajero" placeholder="Observaciones">
-								
-								<div>
-									<button id="agregarPasajeroAlumno"class="button is-rounded estilo">Agregar</button>
-								</div>
-							</div>
-					</div>
-				</div>
-
-				<p><a id="agregarDocente" href="#popupDocente" class="button is-rounded estilo">Docente/No Docente</a></p>
-				<div id="popupDocente" class="overlay">
-					<div id="popupBody">
-						<h2 id="subtitulo">Agregar Docente o No Docente</h2>
-						<a id="cerrar" href="#">&times;</a>
-							<div class="popupContent">
-								<div>
-									<p id="textoBuscarDNI">Buscar por Matricula:</p>
-									<input id="busquedaAlumno" class="item-input input is-info" type="text" placeholder="Código Matricula" >	
-									<input id="busquedaAlumno2" class="item-input input is-info" type="text" placeholder="Número Matricula" >
-								</div>
-
-								<input id="nombrePasajeroAlumno" class="item-input input is-info" name="nombrePasajero" type="text" placeholder="Nombre" maxlength="30" title="Campo Obligatorio" required>
-					
-								<input id="apellidoPasajeroAlumno" class="item-input input is-info" name="apellidoPasajero" type="text" placeholder="Apellido" maxlength="30" title="Campo Obligatorio" required>
-
-								<input id="dniPasajeroAlumno" class="item-input input is-info" name="dniPasajero" type="text" placeholder="DNI" maxlength="30" title="Campo Obligatorio" required>
-
-								<input id="direccionPasajeroAlumno"  class="item-input input is-info" name="direccionPasajero" type="text" placeholder="Dirección" maxlength="100" pattern="[0-9]{8}" minlength="1" maxlength="8" title="Campo Obligatorio" required> 
-
-								<input id="telefonoPasajeroAlumno"  class="item-input input is-info" type="tel" name="telefonoPasajero" placeholder="Teléfono" pattern="[0-9]{10}" minlength="1" maxlength="10" title="Campo Obligatorio" required>
-							
 								<input id="codigoMatriculaPasajeroAlumno" class="item-input input is-info" type="text" name="codMatriculaPasajero" placeholder="Código Matrícula" maxlength="10" title="Campo Obligatorio" required>
 
 								<input id= "numeroMatriculaPasajeroAlumno" class="item-input input is-info" name="numMatriculaPasajero" type="text" placeholder="Número Matrícula" maxlength="10" title="Campo Obligatorio" required>
 
-								<div  id="grupoSanguineoAlumno" class="item-input select is-info" required>
-									<select class="is-hovered" name="grupoSanguineoPasajero">
+								<input id="observacionPasajeroAlumno" class="item-input input is-info" type="text" name="observionesPasajero" placeholder="Observaciones">
+								
+								<div id="botton">
+									<button id="agregarPasajeroAlumno"class="button is-rounded estilo center-button">Agregar</button>
+								</div>
+							</div>
+					</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="popup-overlay"></div>
+
+				<div id="popup2" style="display: none;">
+					<div class="content-popup">
+						<div class="close2"><a href="#" id="close2"><i class="far fa-times-circle"></i></a></div>
+						<div>
+						<div id="popupBody">
+						<h2 id="subtitulo"> Docente o No Docente</h2>
+
+							<div>
+								<div>
+									<p id="textoBuscarLegajo">Buscar por Legajo:</p>
+									<input id="busquedaDocente" class="item-input input is-info" type="text" placeholder="Legajo" >
+								</div>
+
+								<input id="nombrePasajeroDocente" class="item-input input is-info" name="nombrePasajero" type="text" placeholder="Nombre" maxlength="30" title="Campo Obligatorio" required>
+					
+								<input id="apellidoPasajeroDocente" class="item-input input is-info" name="apellidoPasajero" type="text" placeholder="Apellido" maxlength="30" title="Campo Obligatorio" required>
+
+								<input id="dniPasajeroDocente" class="item-input input is-info" name="dniPasajero" type="text" placeholder="DNI" maxlength="30" title="Campo Obligatorio" required>
+
+								<input id="telefonoPasajeroDocente"  class="item-input input is-info" type="tel" name="telefonoPasajero" placeholder="Teléfono" pattern="[0-9]{10}" minlength="1" maxlength="10" title="Campo Obligatorio" required>
+								
+								<input id="direccionPasajeroDocente"  class="item-input input is-info" name="direccionPasajero" type="text" placeholder="Dirección" maxlength="100" pattern="[0-9]{8}" minlength="1" maxlength="8" title="Campo Obligatorio" required> 
+								
+								<div  id="grupoSanguineoDocente" class="item-input select is-info" required>
+									<select id="tamanioGrupoSanguineoDocente"class="is-hovered" name="grupoSanguineoPasajero">
 											<option>Grupo Sanguineo</option>
 											<option value="0-">0-</option>
 											<option value="0+">0+</option>
@@ -246,45 +298,44 @@
 									</select>
 								</div>
 
-								<input id="polizaPasajeroAlumno" class="item-input input is-info" type="text" name="polizaPasajero" placeholder="Número de Poliza" maxlength="10" title="Campo Obligatorio" required>
+								<input id="polizaPasajeroDocente" class="item-input input is-info" type="text" name="polizaPasajero" placeholder="Número de Poliza" maxlength="10" title="Campo Obligatorio" required>
 
-								<input id="observacionPasajeroAlumno" class="item-input input is-info" type="text" name="observionesPasajero" placeholder="Observaciones">
+								<input id="legajoPasajeroDocente" class="item-input input is-info" type="text" name="legajoPasajero" placeholder="Legajo" maxlength="10" title="Campo Obligatorio" required>
+
+								<input id="observacionPasajeroDocente" class="item-input input is-info" type="text" name="observionesPasajero" placeholder="Observaciones">
 								
-								<div>
-									<button id="agregarPasajeroAlumno"class="button is-rounded estilo">Agregar</button>
+								<div id="botton">
+									<button id="agregarPasajeroDocente"class="button is-rounded estilo center-button">Agregar</button>
 								</div>
 							</div>
 					</div>
+
+
+						</div>
+					</div>
 				</div>
+				<div class="popup-overlay2"></div>
 
-				<p><a id="agregarOtro" href="#popupOtro" class="button is-rounded estilo">Otros</a></p>
-				<div id="popupOtro" class="overlay">
-					<div id="popupBody">
-						<h2 id="subtitulo">Agregar Otro</h2>
-						<a id="cerrar" href="#">&times;</a>
-							<div class="popupContent">
-								<div>
-									<p id="textoBuscarDNI">Buscar por Matricula:</p>
-									<input id="busquedaAlumno" class="item-input input is-info" type="text" placeholder="Código Matricula" >	
-									<input id="busquedaAlumno2" class="item-input input is-info" type="text" placeholder="Número Matricula" >
-								</div>
+				<div id="popup3" style="display: none;">
+					<div class="content-popup">
+						<div class="close3"><a href="#" id="close3"><i class="far fa-times-circle"></i></a></div>
+						<div>
+						<div id="popupBody">
+						<h2 id="subtitulo"> Otros</h2>
 
-								<input id="nombrePasajeroAlumno" class="item-input input is-info" name="nombrePasajero" type="text" placeholder="Nombre" maxlength="30" title="Campo Obligatorio" required>
+							<div>
+								
+								<input id="nombrePasajeroOtro" class="item-input input is-info" name="nombrePasajero" type="text" placeholder="Nombre" maxlength="30" title="Campo Obligatorio" required>
 					
-								<input id="apellidoPasajeroAlumno" class="item-input input is-info" name="apellidoPasajero" type="text" placeholder="Apellido" maxlength="30" title="Campo Obligatorio" required>
+								<input id="apellidoPasajeroOtro" class="item-input input is-info" name="apellidoPasajero" type="text" placeholder="Apellido" maxlength="30" title="Campo Obligatorio" required>
 
-								<input id="dniPasajeroAlumno" class="item-input input is-info" name="dniPasajero" type="text" placeholder="DNI" maxlength="30" title="Campo Obligatorio" required>
-
-								<input id="direccionPasajeroAlumno"  class="item-input input is-info" name="direccionPasajero" type="text" placeholder="Dirección" maxlength="100" pattern="[0-9]{8}" minlength="1" maxlength="8" title="Campo Obligatorio" required> 
-
-								<input id="telefonoPasajeroAlumno"  class="item-input input is-info" type="tel" name="telefonoPasajero" placeholder="Teléfono" pattern="[0-9]{10}" minlength="1" maxlength="10" title="Campo Obligatorio" required>
-							
-								<input id="codigoMatriculaPasajeroAlumno" class="item-input input is-info" type="text" name="codMatriculaPasajero" placeholder="Código Matrícula" maxlength="10" title="Campo Obligatorio" required>
-
-								<input id= "numeroMatriculaPasajeroAlumno" class="item-input input is-info" name="numMatriculaPasajero" type="text" placeholder="Número Matrícula" maxlength="10" title="Campo Obligatorio" required>
-
-								<div  id="grupoSanguineoAlumno" class="item-input select is-info" required>
-									<select class="is-hovered" name="grupoSanguineoPasajero">
+								<input id="dniPasajeroOtro" class="item-input input is-info" name="dniPasajero" type="text" placeholder="DNI" maxlength="30" title="Campo Obligatorio" required>
+								
+								<div>
+									<p id="textoOtros">Fecha de Nacimiento:</p>
+									<input id="fechaNacimientoPasajeOtro"  class="item-input input is-info" name="fechaNaciminetoPasajero" placeholder="Fecha de Nacimiento"type="date" maxlength="100" pattern="[0-9]{8}" minlength="1" maxlength="8" title="Campo Obligatorio" required>
+									<div  id="grupoSanguineoOtro" class="item-input select is-info" required>
+									<select id="tamanioGrupoSanguineoOtro"class="is-hovered" name="grupoSanguineoPasajero">
 											<option>Grupo Sanguineo</option>
 											<option value="0-">0-</option>
 											<option value="0+">0+</option>
@@ -296,19 +347,37 @@
 											<option value="AB+">AB+</option>
 									</select>
 								</div>
+								</div>
 
-								<input id="polizaPasajeroAlumno" class="item-input input is-info" type="text" name="polizaPasajero" placeholder="Número de Poliza" maxlength="10" title="Campo Obligatorio" required>
-
-								<input id="observacionPasajeroAlumno" class="item-input input is-info" type="text" name="observionesPasajero" placeholder="Observaciones">
+								<input id="telefonoPasajeroOtro"  class="item-input input is-info" type="tel" name="telefonoPasajero" placeholder="Teléfono" pattern="[0-9]{10}" minlength="1" maxlength="10" title="Campo Obligatorio" required>
 								
-								<div>
-									<button id="agregarPasajeroAlumno"class="button is-rounded estilo">Agregar</button>
+								<input id="direccionPasajeroOtro"  class="item-input input is-info" name="direccionPasajero" type="text" placeholder="Dirección" maxlength="100" pattern="[0-9]{8}" minlength="1" maxlength="8" title="Campo Obligatorio" required>
+
+								
+
+								<input id="aseguradoraPasajeroOtro" class="item-input input is-info" type="text" name="aseguradoraPasajero" placeholder="Aseguradora" maxlength="10" title="Campo Obligatorio" required>
+
+								<input id="polizaPasajeroOtro" class="item-input input is-info" type="text" name="polizaPasajero" placeholder="Número de Poliza" maxlength="10" title="Campo Obligatorio" required>
+
+								<input id="razonViajePasajeroOtro" class="item-input input is-info" type="text" name="razonViajePasajero" placeholder="Razón de Viaje">
+								
+								<input id="observacionPasajeroOtro" class="item-input input is-info" type="text" name="observionesPasajero" placeholder="Observaciones">
+								
+								<div id="botton">
+									<button id="agregarPasajeroOtro"class="button is-rounded estilo center-button">Agregar</button>
 								</div>
 							</div>
 					</div>
+
+
+						</div>
+					</div>
 				</div>
-				
+				<div class="popup-overlay3"></div>
+
+
 			</div>
+
 		</div>
 
 		    <div id="botton2"> <a id="agregar2" class="button is-rounded">Enviar Solicitud del Viaje</a> </div>

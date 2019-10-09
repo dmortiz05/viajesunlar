@@ -16,6 +16,6 @@
     `polizaseguro` = '$polizaseguro', `licencia` = '$licencia', `vencimientocarnet` = '$vencimientocarnet',
 	`observaciones` = '$observaciones' WHERE `chofer`.`idchofer` = $idchofer;";
 	
-		mysqli_query($link, $query);
-		header("Location: ../logistica/ingresarChoferes.php");
+	mysqli_query($link, $query);
+	header("Location: ../../frontend/listarChoferes.php");
 ?>

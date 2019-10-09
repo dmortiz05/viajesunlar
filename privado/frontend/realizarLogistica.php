@@ -114,7 +114,8 @@
                         </div>
                     </div>
             </div>
-                    <button class="button is-info is-rounded center-button" name="submit" id="submit">Registrar</button>
+
+            <div id="botonesLogistica" style="margin-top: 12px;"><button class="button is-info is-rounded center-button" name="submit" id="submit">Registrar</button></div>        
             </form>
     </div>
     </div>
