@@ -9,7 +9,7 @@
     	<td><?php echo $reg['proximoservice']; ?></td>
     	<td><?php echo $reg['sede']; ?></td>
         <td><?php echo $reg['observaciones']; ?></td>
-        <td><a href="../frontend/editarChofer.php?dni=<?php echo $reg["dni"]; ?>" id="opacidad"><i id="opacidad" class="far fa-edit"></i></a></td>
-		<td><a href="../backend/choferes/eliminachofer.php?dni=<?php echo $reg["dni"]; ?>" id="opacidad"><i class="far fa-trash-alt"></i></a></td>
+        <td><a href="../frontend/editarAutomotor.php?patente=<?php echo $reg["patente"]; ?>" id="opacidad"><i id="opacidad" class="far fa-edit"></i></a></td>
+		<td><a href="../backend/automotores/eliminaautomotor.php?patente=<?php echo $reg["patente"]; ?>" id="opacidad"><i class="far fa-trash-alt"></i></a></td>
     </tr>
 <?php } ?>

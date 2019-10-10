@@ -39,13 +39,20 @@
             <?php require "../../templates/dashboard.php"?>
             <?php require_once "../backend/dbconexion.php";?>
         </div>
+
+        <?php 
+        $patente = $_GET["patente"];
+        $query = "SELECT * FROM automotor WHERE patente='$patente'";
+        $result = mysqli_query($link, $query);
         
-        <form method="post" action="../backend/automotores/cargaautomotores.php" role="form" class="data-container">
+        while ($reg = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
+
+        <form method="post" action="../backend/automotores/modificaautomotor.php" role="form" class="data-container">
             <fieldset class="data-container-background">DATOS DEL AUTOMOTOR
                 <div class="container-grid-form">
-                    <input class="item-input input is-info" type="text" name="patente" placeholder="Patente" minlength="1" maxlength="8" >
-                    <input class="item-input input is-info" type="text" name="marca" placeholder="Marca" required>
-                    <input class="item-input input is-info" type="text" name="modelo" placeholder="Modelo" required>
+                    <input class="item-input input is-info" value="<?php echo $reg["patente"] ?>" type="text" name="patente" placeholder="Patente" minlength="1" maxlength="8" >
+                    <input class="item-input input is-info" value="<?php echo $reg["marca"] ?>" type="text" name="marca" placeholder="Marca" required>
+                    <input class="item-input input is-info" value="<?php echo $reg["modelo"] ?>" type="text" name="modelo" placeholder="Modelo" required>
                 </div>
             </fieldset>
             <br>
@@ -53,7 +60,7 @@
                 <div class="container-grid-form">
                     <div class="item-input field">
                         <div class="control">
-                            <div id="tipoAutomotor" name="tipo" class="select is-info">
+                            <div id="tipoAutomotor" value="<?php echo $reg["tipo"] ?>" name="tipo" class="select is-info">
                                 <select id="tamanioTipoAutomotor" required>
                                     <option value="" disabled selected hidden>Tipo</option>
                                     <option value="CAMIÓN">Camión</option>
@@ -69,7 +76,7 @@
                     </div>
                     <div class="item-input field">
                         <div class="control">
-                            <div id="sedeAutomotor" name="sede" class="select is-info">
+                            <div id="sedeAutomotor" selected="<?php echo $reg["dni"] ?>" name="sede" class="select is-info">
                                 <select id="tamanioSedeAutomotor" required>
                                     <option value="" disabled selected hidden>Sede</option>
                                     <option value="Capital">Capital</option>
@@ -87,22 +94,27 @@
                         </div>
                     </div>
                     <label for="">Próximo service
-                        <input class="item-input input is-info" type="date" name="proximoservice" placeholder="Vencimiento" required>
+                        <input class="item-input input is-info" value="<?php echo $reg["proximoservice"] ?>" type="date" name="proximoservice" placeholder="Vencimiento" required>
                     </label> 
                 </div>  
             </fieldset>
             <br>
             <div class="field obs data-container-background">
                 <div class="control">
-                    <textarea class="textarea is-info" name="observaciones" placeholder="Observaciones"></textarea>
+                    <textarea class="textarea is-info" value="<?php echo $reg["observaciones"] ?>" name="observaciones" placeholder="Observaciones"></textarea>
                 </div>
             </div>
 
-            <button class="button is-info is-rounded center-button" name="submit" id="submit">Registrar</button>
+            <div id="botonesLogistica" style="text-align:center">
+                <input class="button is-info is-rounded" name="Guardar" type="submit" id="submit" name="submit" value="Guardar"/>
+                <input class="button is-danger is-rounded" name="btncancelar" id="btncancelar" onClick="history.back()" value="Cancelar"/>
+            </div>
+
         </form>
+        <?php }?>
     </div>
-    
+
     <script src="../../publico/js/nav.js"></script>
-    
+    <script src="../../publico/js/jsvalidate.js"></script>
 </body>
 </html>

@@ -43,68 +43,72 @@
             <?php 
             require "../../templates/dashboard.php";
             require_once "../backend/dbconexion.php";
-            require_once "../backend/choferes/seleccionachofer.php";
             ?>
 
         </div>
 
-        <?php while ($reg = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
+        <?php 
+        $dni = $_GET["dni"];
+        $query = "SELECT * FROM chofer WHERE dni='$dni'";
+        $result = mysqli_query($link, $query);
+        
+        while ($reg = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
 
         <form method="post" action="../backend/choferes/modificachofer.php?id=<?php echo $reg['dni']; ?>" role="form" class="data-container">
-                    <fieldset class="data-container-background">DATOS PERSONALES
-                        <div class="container-grid-form">
-                            
-                            <input class="item-input input is-info" value="<?php echo $reg["dni"] ?>" type="text" name="dni" placeholder="DNI" >
-                            <input class="item-input input is-info" value="<?php echo $reg["apellido"] ?>" type="text" name="apellido" placeholder="Apellido">
-                            <input class="item-input input is-info" value="<?php echo $reg["nombre"] ?>" type="text" name="nombre" placeholder="Nombre">
+            <fieldset class="data-container-background">DATOS PERSONALES
+                <div class="container-grid-form">        
+                    <input class="item-input input is-info" value="<?php echo $reg["dni"] ?>" type="text" name="dni" placeholder="DNI" >
+                    <input class="item-input input is-info" value="<?php echo $reg["apellido"] ?>" type="text" name="apellido" placeholder="Apellido">
+                    <input class="item-input input is-info" value="<?php echo $reg["nombre"] ?>" type="text" name="nombre" placeholder="Nombre">
                       
-                            <input class="item-input input is-info jsrequired" value="<?php echo $reg["direccion"] ?>" type="text" name="direccion" placeholder="Dirección">
-                            <input class="item-input input is-info" value="<?php echo $reg["telefono"] ?>" type="text" name="telefono" placeholder="Teléfono">
-                            <div class="item-input field">
-                                <div class="control">
-                                    <div id="gruposanguineoChoferes" class="select is-info">
-                                        <select id="gruposanguineo" value="<?php echo $reg["gruposanguineo"] ?>" name="gruposanguineo" class="form-control select-notfirst">
-                                            <option value="" disabled selected hidden>Grupo Sanguíneo</option>
-                                            <option value="0-">0-</option>
-                                            <option value="0+">0+</option>
-                                            <option value="A-">A-</option>
-                                            <option value="A+">A+</option>
-                                            <option value="B-">B-</option>
-                                            <option value="B+">B+</option>
-                                            <option value="AB-">AB-</option>
-                                            <option value="AB+">AB+</option>
-                                        </select>
-                                    </div>
-                                </div>
+                    <input class="item-input input is-info jsrequired" value="<?php echo $reg["direccion"] ?>" type="text" name="direccion" placeholder="Dirección">
+                    <input class="item-input input is-info" value="<?php echo $reg["telefono"] ?>" type="text" name="telefono" placeholder="Teléfono">
+                    <div class="item-input field">
+                        <div class="control">
+                            <div id="gruposanguineoChoferes" class="select is-info">
+                                <select id="gruposanguineo" value="<?php echo $reg["gruposanguineo"] ?>" name="gruposanguineo" class="form-control select-notfirst">
+                                    <option value="" disabled selected hidden>Grupo Sanguíneo</option>
+                                    <option value="0-">0-</option>
+                                    <option value="0+">0+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="A+">A+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="AB+">AB+</option>
+                                </select>
                             </div>
                         </div>
-                    </fieldset>
-                    <br>
-                    <fieldset class="data-container-background">OTROS DATOS 
-                        <div class="container-grid-form"><input class="item-input input is-info" value="<?php echo $reg["polizaseguro"] ?>" type="text" name="polizaseguro" placeholder="Póliza de seguro">
-                            <input class="item-input input is-info" value="<?php echo $reg["licencia"] ?>" type="text" name="licencia" placeholder="Licencia">
-                            <label for="">Fecha Vencimiento Licencia
-                                <input class="item-input input is-info" value="<?php echo $reg["vencimientocarnet"] ?>" type="date" name="vencimientocarnet" placeholder="Vencimiento">
-                            </label> 
-                        </div>  
-                    </fieldset>
-                    <br>
-                    <div class="field obs data-container-background">
-                        <div class="control">
-                            <textarea class="textarea is-info" value="<?php echo $reg["observaciones"] ?>" type="text" name="observaciones" placeholder="Observaciones"></textarea>
-                        </div>
                     </div>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset class="data-container-background">OTROS DATOS 
+                <div class="container-grid-form"><input class="item-input input is-info" value="<?php echo $reg["polizaseguro"] ?>" type="text" name="polizaseguro" placeholder="Póliza de seguro">
+                    <input class="item-input input is-info" value="<?php echo $reg["licencia"] ?>" type="text" name="licencia" placeholder="Licencia">
+                    <label for="">Fecha Vencimiento Licencia
+                        <input class="item-input input is-info" value="<?php echo $reg["vencimientocarnet"] ?>" type="date" name="vencimientocarnet" placeholder="Vencimiento">
+                    </label> 
+                </div>  
+            </fieldset>
+            <br>
+            <div class="field obs data-container-background">
+                <div class="control">
+                    <textarea class="textarea is-info" value="<?php echo $reg["observaciones"] ?>" type="text" name="observaciones" placeholder="Observaciones"></textarea>
+                </div>
+            </div>
 
-                    <div id="botonesLogistica" style="text-align:center">
-                        <input class="button is-info is-rounded" name="Guardar" type="submit" id="submit" name="submit" value="Guardar"/>
-                        <input class="button is-danger is-rounded" name="btncancelar" id="btncancelar" onClick="history.back()" value="Cancelar"/>
-                    </div>
+            <div id="botonesLogistica" style="text-align:center">
+                <input class="button is-info is-rounded" name="Guardar" type="submit" id="submit" name="submit" value="Guardar"/>
+                <input class="button is-danger is-rounded" name="btncancelar" id="btncancelar" onClick="history.back()" value="Cancelar"/>
+            </div>
 
-            </form>
-            <?php }?>
+        </form>
+        <?php }?>
     </div>
-    <script src="../../publico/js/nav.js">
+
+    <script src="../../publico/js/nav.js"></script>
     <script src="../../publico/js/jsvalidate.js"></script>
-    </script>
+
 </body>
 </html>
