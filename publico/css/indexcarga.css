@@ -2,6 +2,9 @@ body {
     overflow-x: hidden;
 }
 
+
+/* FORMULARIOS */
+
 .formularios {
     float: none;
     margin-top: 1%;
@@ -17,7 +20,6 @@ body {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     background: rgb(240, 244, 248);
-    /* Old browsers */
 }
 
 #contenedor {
@@ -50,6 +52,9 @@ body {
 #opacidad a:hover {
     opacity: 1;
 }
+
+
+/* FORMULARIO DATOS DEL VIAJE */
 
 #motivoViaje {
     width: 250px;
@@ -93,8 +98,11 @@ body {
     margin-bottom: 5px;
 }
 
+
+/* FORMULARIO DATOS DEL ENCARGADO */
+
 #textoBuscarDNI {
-    width: 150px;
+    width: 250px;
     margin-top: 8px;
     margin-left: 15px;
 }
@@ -164,98 +172,8 @@ body {
     margin-bottom: 5px;
 }
 
-#busquedaAlumno {
-    margin-left: 10%;
-    width: 200px;
-    margin-bottom: 2%;
-}
 
-#busquedaAlumno2 {
-    margin-left: 1%;
-    width: 200px;
-    margin-bottom: 2%;
-}
-
-#nombrePasajeroAlumno {
-    width: 200px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#apellidoPasajeroAlumno {
-    width: 200px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#dniPasajeroAlumno {
-    width: 200px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#telefonoPasajeroAlumno {
-    width: 200px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#direccionPasajeroAlumno {
-    width: 325px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#codigoMatriculaPasajeroAlumno {
-    width: 185px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#numeroMatriculaPasajeroAlumno {
-    width: 185px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#grupoSanguineoAlumno {
-    width: 180px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#polizaPasajeroAlumno {
-    width: 240px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#observacionPasajeroAlumno {
-    width: 695px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#agregarPasajeroAlumno {
-    margin-top: 2%;
-    margin-left: 45%;
-}
-
-#botton {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.estilo {
-    float: none;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    border-color: #E27B10;
-    font-family: Roboto;
-    font-size: 20px;
-    color: #260B17;
-    opacity: 0.7;
-}
+/* TABLA ENCARGADOS */
 
 #tamanioTabla {
     width: 80%;
@@ -275,6 +193,325 @@ body {
     width: 1%;
 }
 
+
+/* AGREGAR PASAJEROS*/
+
+#botonesAgregarPasajeros {
+    text-align: center;
+}
+
+
+/* FORMULARIO AGREGAR ALUMNOS */
+
+#textoBuscarMatricula {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#busquedaAlumno {
+    min-width: 145px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+#busquedaAlumno2 {
+    min-width: 145px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+#nombrePasajeroAlumno {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#apellidoPasajeroAlumno {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#dniPasajeroAlumno {
+    min-width: 145px;
+    width: 32.4%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#telefonoPasajeroAlumno {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#direccionPasajeroAlumno {
+    min-width: 295px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#codigoMatriculaPasajeroAlumno {
+    min-width: 145px;
+    width: 23.7%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#numeroMatriculaPasajeroAlumno {
+    min-width: 144px;
+    width: 23.7%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#grupoSanguineoAlumno {
+    min-width: 144px;
+    width: 33%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tamanioGrupoSanguineoAlumno {
+    min-width: 145px;
+    width: 98%;
+}
+
+#polizaPasajeroAlumno {
+    min-width: 144px;
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#observacionPasajeroAlumno {
+    min-width: 295px;
+    width: 98.3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* FORMULARIO AGREGAR DOCENTE */
+
+#textoBuscarLegajo {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#busquedaDocente {
+    min-width: 145px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+#nombrePasajeroDocente {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#apellidoPasajeroDocente {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#dniPasajeroDocente {
+    min-width: 145px;
+    width: 32.4%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#telefonoPasajeroDocente {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#direccionPasajeroDocente {
+    min-width: 295px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#legajoPasajeroDocente {
+    min-width: 295px;
+    width: 49%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#grupoSanguineoDocente {
+    min-width: 144px;
+    width: 33%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tamanioGrupoSanguineoDocente {
+    min-width: 145px;
+    width: 98%;
+}
+
+#polizaPasajeroDocente {
+    min-width: 144px;
+    width: 49%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#observacionPasajeroDocente {
+    min-width: 295px;
+    width: 98.3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* FORMULARIO AGREGAR OTROS */
+
+#nombrePasajeroOtro {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#apellidoPasajeroOtro {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#dniPasajeroOtro {
+    min-width: 295px;
+    width: 32.4%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#textoOtros {
+    float: left;
+    min-width: 160px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#fechaNacimientoPasajeOtro {
+    min-width: 135px;
+    width: 32.4%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#telefonoPasajeroOtro {
+    min-width: 115px;
+    width: 42.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#direccionPasajeroOtro {
+    min-width: 145px;
+    width: 55.4%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#grupoSanguineoOtro {
+    min-width: 294px;
+    width: 52%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tamanioGrupoSanguineoOtro {
+    min-width: 295px;
+    width: 99%;
+}
+
+#aseguradoraPasajeroOtro {
+    min-width: 144px;
+    width: 49%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#polizaPasajeroOtro {
+    min-width: 144px;
+    width: 49%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#razonViajePasajeroOtro {
+    min-width: 295px;
+    width: 98.3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#observacionPasajeroOtro {
+    min-width: 295px;
+    width: 98.3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* TABLA PASAJEROS */
+
+#tamanioTablaPasajeros {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+#tamanioNombreApellidoPasajero {
+    width: 4.5%;
+}
+
+#tamanioTipoPasajero {
+    width: 3%;
+}
+
+#tamanioDniPolizaPasajero {
+    width: 4%;
+}
+
+
+/* GENERAL */
+
+.estilo {
+    float: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-color: #E27B10;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #260B17;
+    opacity: 0.7;
+}
+
+#botton {
+    text-align: center;
+    margin-top: 10px;
+}
+
 #botton a:hover {
     opacity: 1;
 }
@@ -282,6 +519,168 @@ body {
 #botton2 {
     text-align: center;
     margin-bottom: 10px;
+}
+
+#botton2 a:hover {
+    opacity: 1;
+}
+
+
+/* FORMULARIOS POPUP ALUMNOS/GRADUADOS, DOCENTES/NODOCENTES, OTROS */
+
+#popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#popup2 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#popup3 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#popup4 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#popup5 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#popup6 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.content-popup {
+    margin: 0px auto;
+    margin-top: 5%;
+    position: relative;
+    padding: 5px;
+    width: 85%;
+    height: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 2px #666666;
+}
+
+.popup-overlay {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.popup-overlay2 {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.popup-overlay3 {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.popup-overlay4 {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.popup-overlay5 {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.popup-overlay6 {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+}
+
+.close2 {
+    position: absolute;
+    right: 15px;
+}
+
+.close3 {
+    position: absolute;
+    right: 15px;
+}
+
+.close4 {
+    position: absolute;
+    right: 15px;
+}
+
+.close5 {
+    position: absolute;
+    right: 15px;
+}
+
+.close6 {
+    position: absolute;
+    right: 15px;
 }
 
 #agregar2 {
@@ -292,53 +691,4 @@ body {
     font-size: 20px;
     color: #260B17;
     opacity: 0.5;
-}
-
-#botton2 a:hover {
-    opacity: 1;
-}
-
-
-/* formulario Pop*/
-
-.overlay {
-    position: fixed;
-    top: -15%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
-
-#popupBody {
-    width: 80%;
-    padding: 2%;
-    border-radius: 15px;
-    background: #FFF;
-    position: relative;
-    transition: all 5s ease-in-out;
-    margin: 20% auto;
-}
-
-#cerrar {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #F00;
-}
-
-color: #F00;
-
 }

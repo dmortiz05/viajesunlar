@@ -1,0 +1,352 @@
+body {
+    overflow-x: hidden;
+}
+
+#popup {
+    /*left: 0;*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.content-popup {
+    margin: 0px auto;
+    margin-top: 5%;
+    position: relative;
+    padding: 5px;
+    width: 85%;
+    height: 100%;
+    /*border-radius: 4px;*/
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 2px #666666;
+}
+
+.popup-overlay {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+}
+
+.formularios {
+    float: none;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    width: 80%;
+    clear: both;
+    padding: 30px;
+    box-shadow: 0px 2px 2px #000;
+    -moz-box-shadow: 0px 2px 2px #000;
+    -webkit-box-shadow: 0px 2px 2px #000;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: rgb(240, 244, 248);
+    /* Old browsers */
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: 20fr 1fr;
+}
+
+#titulo {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 40px;
+    color: #260B17;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#subtitulo {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 25px;
+    color: #260B17;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#opacidad {
+    opacity: 0.8;
+}
+
+#opacidad a:hover {
+    opacity: 1;
+}
+
+#motivoViaje {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#sedeViaje {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tamagnioSede {
+    width: 250px;
+}
+
+#destinoViaje {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#textosFechas {
+    float: left;
+    width: 150px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#fechaViaje {
+    float: left;
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#observacionViaje {
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#textoBuscarDNI {
+    width: 250px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#busquedaEncargado {
+    float: left;
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#nombreEncargado {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#apellidoEncargado {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#dniEncargado {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#direccionEncargado {
+    width: 377px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#telefonoEncargado {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#emailEncargado {
+    width: 377px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#grupoSanguineoEncargado {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tamagnioGrupoSanguineo {
+    width: 250px;
+}
+
+#polizaEncargado {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#observacionEncargado {
+    width: 760px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#textoBuscarMatricula {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#busquedaAlumno {
+    min-width: 145px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+#busquedaAlumno2 {
+    min-width: 145px;
+    width: 49%;
+    margin-bottom: 2%;
+}
+
+#nombrePasajeroAlumno {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#apellidoPasajeroAlumno {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#dniPasajeroAlumno {
+    min-width: 145px;
+    width: 32.4%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#telefonoPasajeroAlumno {
+    min-width: 145px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#direccionPasajeroAlumno {
+    min-width: 295px;
+    width: 32.6%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#codigoMatriculaPasajeroAlumno {
+    min-width: 145px;
+    width: 16%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#numeroMatriculaPasajeroAlumno {
+    min-width: 145px;
+    width: 16%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#grupoSanguineoAlumno {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tamanioGrupoSanguineoAlumno {
+    width: 40.6%;
+}
+
+#polizaPasajeroAlumno {
+    width: 240px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#observacionPasajeroAlumno {
+    width: 695px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#agregarPasajeroAlumno {
+    margin-top: 2%;
+    margin-left: 45%;
+}
+
+#botton {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.estilo {
+    float: none;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-color: #E27B10;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #260B17;
+    opacity: 0.7;
+}
+
+#tamanioTabla {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#tamanioNombreApellido {
+    width: 5%;
+}
+
+#tamanioDniPoliza {
+    width: 5%;
+}
+
+#tamanioIconos {
+    width: 1%;
+}
+
+#botton a:hover {
+    opacity: 1;
+}
+
+#botton2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#agregar2 {
+    float: none;
+    background: #42C576;
+    border-color: #42C576;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #260B17;
+    opacity: 0.5;
+}
+
+#botton2 a:hover {
+    opacity: 1;
+}
