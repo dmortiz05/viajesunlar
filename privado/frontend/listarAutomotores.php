@@ -36,6 +36,8 @@
     <div class="container-grid">
         <div class="menu menu-container-max">
             <?php require "../../templates/dashboard.php"?>
+            <?php require_once "../backend/dbconexion.php";?>
+            <?php require_once "../backend/automotores/ordenarautomotores.php";?>
         </div>
         <div class="data-table-container">
                 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -48,10 +50,12 @@
                             <th>Prox. Service</th>
                             <th>Sede</th>
                             <th>Observaciones</th>
+                            <th id="tamanioIconos"></th>
+                            <th id="tamanioIconos"></th>
                         </tr>
                     </thead>
                     <tbody>
-
+                        <?php require_once "../backend/automotores/listadoautomotores.php";?>
                     </tbody>
                 </table>
         </div>

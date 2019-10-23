@@ -1,0 +1,31 @@
+#tipoAutomotor {
+    width: 100%;
+}
+
+#tamanioTipoAutomotor {
+    width: 100%;
+}
+
+#sedeAutomotor {
+    width: 100%;
+}
+
+#tamanioSedeAutomotor {
+    width: 100%;
+}
+
+#gruposanguineoChoferes {
+    width: 100%;
+}
+
+#gruposanguineo {
+    width: 100%;
+}
+
+#botonesLogistica{
+    align-items: center;
+}
+
+#btncancelar{
+    width: 100px;
+}

@@ -21,10 +21,10 @@
 </head>
 <body>
     <nav class="navbar nav-bar" role="navigation" aria-label="main navigation">
-        <?php require_once "../../templates/navbarPrivado.php"?>
+        <?php require_once "../../templates/navbarPrivado.php";?>
         <div id="navbarBasicExample" class="navbar-menu">
             <aside class="menu menu-container-min">
-                <?php require_once"../../templates/dashboard.php"?>
+                <?php require_once "../../templates/dashboard.php";?>
             </aside>
             <div class="navbar-end" style="background: rgba(44, 11, 28, 0.151);">
                 <div class="navbar-item" style=" width:100%;">
@@ -36,8 +36,8 @@
     <div class="container-grid">
         <div class="menu menu-container-max">
             <?php require "../../templates/dashboard.php";?>
-            <?php require_once "../logisticas/dbconexion.php";?>
-            <?php require_once "../logisticas/ordenarchoferes.php";?>
+            <?php require_once "../backend/dbconexion.php";?>
+            <?php require_once "../backend/choferes/ordenarchoferes.php";?>
         </div>
         <div class="data-table-container">
                 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -53,10 +53,12 @@
                             <th>Licencia</th>
                             <th>Fecha Ven.</th>
                             <th>Observaciones</th>
+                            <th id="tamanioIconos"></th>
+                            <th id="tamanioIconos"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php require_once "../logisticas/listadochoferes.php";?>
+                        <?php require_once "../backend/choferes/listadochoferes.php";?>
                     </tbody>
                 </table>
         </div>

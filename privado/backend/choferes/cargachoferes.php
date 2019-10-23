@@ -1,6 +1,5 @@
 <?php
-		$link = mysqli_connect("localhost","root","","registrodeviajes");
-		//$idchofer=$_POST["idchofer"];
+		$link = mysqli_connect("localhost","php_parque","AutoParque.1920","php_parque");
 		$dni=$_POST["dni"];
 		$nombre=$_POST["nombre"];
 		$apellido=$_POST["apellido"];
@@ -19,9 +18,8 @@
 
 		VALUES ('$dni', '$nombre','$apellido', '$direccion', 
 		'$telefono', '$_POST[gruposanguineo]', '$polizaseguro', 
-		'$licencia', '$vencimientocarnet', '$observaciones'
-		);
+		'$licencia', '$vencimientocarnet', '$observaciones');
 		";
 		mysqli_query($link, $query);
-		header("Location: ../logistica/ingresarChoferes.php");
+		header("Location: ../../frontend/ingresarChoferes.php");
 ?>

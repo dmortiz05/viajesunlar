@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../../publico/css/normalize.css">
     <link rel="stylesheet" href="../../publico/css/styleElements.css">
     <link rel="stylesheet" href="../../publico/css/styleNavDash.css">
+    <link rel="stylesheet" href="../../publico/css/logistica.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9c18248300.js"></script>
     <title>Logistica</title>
@@ -35,25 +36,28 @@
     </nav>
     <div class="container-grid">
         <div class="menu menu-container-max">
-            <?php require "../../templates/dashboard.php"?>
+            <?php require "../../templates/dashboard.php";?>
+            <?php require_once "../backend/dbconexion.php";?>
         </div>
-        <form action="" class="data-container">
+        <form method="post" action="../backend/usuarios/cargausuario.php" role="form" class="data-container">
                     <fieldset class="data-container-background">DATOS DE LA CUENTA
                         <div class="container-grid-form">
-                            <input class="item-input input is-info" type="text" placeholder="Encargado" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
-                            <input class="item-input input is-info" type="text" placeholder="Usuario" required>
-                            <input class="item-input input is-info" type="text" placeholder="Contraseña" required>
+                            <input class="item-input input is-info" type="text" name="nickname" placeholder="Usuario" required>
+                            <input class="item-input input is-info" type="text" name="contrasenia" placeholder="Contraseña" required>
                         </div>
                     </fieldset>
                     <br>
                     <div class="field obs data-container-background">
                         <div class="control">
-                            <textarea class="textarea is-info" placeholder="Observaciones"></textarea>
+                            <textarea class="textarea is-info" name="observaciones" placeholder="Observaciones"></textarea>
                         </div>
                     </div>
 
-                    <button class="button is-info is-rounded center-button">Registrar</button>
+                    <button class="button is-info is-rounded center-button" name="submit" id="submit">Registrar</button>
             </form>
     </div>
+    </div>
+    <script src="../../publico/js/nav.js">
+    </script>
 </body>
 </html>
