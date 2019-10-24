@@ -194,6 +194,13 @@ body {
 }
 
 
+/* AGREGAR PASAJEROS*/
+
+#botonesAgregarPasajeros {
+    text-align: center;
+}
+
+
 /* FORMULARIO AGREGAR ALUMNOS */
 
 #textoBuscarMatricula {
@@ -465,6 +472,28 @@ body {
 }
 
 
+/* TABLA PASAJEROS */
+
+#tamanioTablaPasajeros {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+#tamanioNombreApellidoPasajero {
+    width: 4.5%;
+}
+
+#tamanioTipoPasajero {
+    width: 3%;
+}
+
+#tamanioDniPolizaPasajero {
+    width: 4%;
+}
+
+
 /* GENERAL */
 
 .estilo {
@@ -520,6 +549,27 @@ body {
     z-index: 1001;
 }
 
+#popup4 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#popup5 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#popup6 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
 .content-popup {
     margin: 0px auto;
     margin-top: 5%;
@@ -567,6 +617,42 @@ body {
     opacity: 0.7;
 }
 
+.popup-overlay4 {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.popup-overlay5 {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.popup-overlay6 {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
 .close {
     position: absolute;
     right: 15px;
@@ -578,6 +664,21 @@ body {
 }
 
 .close3 {
+    position: absolute;
+    right: 15px;
+}
+
+.close4 {
+    position: absolute;
+    right: 15px;
+}
+
+.close5 {
+    position: absolute;
+    right: 15px;
+}
+
+.close6 {
     position: absolute;
     right: 15px;
 }
