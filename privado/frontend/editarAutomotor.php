@@ -22,10 +22,10 @@
 </head>
 <body>
     <nav class="navbar nav-bar" role="navigation" aria-label="main navigation">
-        <?php require_once "../../templates/navbarPrivado.php"?>
+        <?php require_once "../../templates/navbarPrivado.php";?>
         <div id="navbarBasicExample" class="navbar-menu">
             <aside class="menu menu-container-min">
-                <?php require_once"../../templates/dashboard.php"?>
+                <?php require_once"../../templates/dashboard.php";?>
             </aside>
             <div class="navbar-end" style="background: rgba(44, 11, 28, 0.151);">
                 <div class="navbar-item" style=" width:100%;">
@@ -36,33 +36,35 @@
     </nav>
     <div class="container-grid">
         <div class="menu menu-container-max">
-            <?php require "../../templates/dashboard.php"?>
-            <?php require_once "../backend/dbconexion.php";?>
+            <?php require "../../templates/dashboard.php";?>
+            <?php require "../backend/dbconexion.php";?>
         </div>
 
         <?php 
-        $patente = $_GET["patente"];
-        $query = "SELECT * FROM automotor WHERE patente='$patente'";
+        $idautomotor = $_GET["idautomotor"];
+        $query = "SELECT * FROM automotor WHERE idautomotor=$idautomotor";
         $result = mysqli_query($link, $query);
         
         while ($reg = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
 
-        <form method="post" action="../backend/automotores/modificaautomotor.php" role="form" class="data-container">
+        <form method="POST" action="../backend/automotores/modificaautomotor.php" role="form" class="data-container">
             <fieldset class="data-container-background">DATOS DEL AUTOMOTOR
                 <div class="container-grid-form">
                     <input class="item-input input is-info" value="<?php echo $reg["patente"] ?>" type="text" name="patente" placeholder="Patente" minlength="1" maxlength="8" >
                     <input class="item-input input is-info" value="<?php echo $reg["marca"] ?>" type="text" name="marca" placeholder="Marca" required>
                     <input class="item-input input is-info" value="<?php echo $reg["modelo"] ?>" type="text" name="modelo" placeholder="Modelo" required>
+                    <input class="item-input input is-info" value="<?php echo $reg["idautomotor"] ?>" type="text" name="idautomotor" placeholder="ID" hidden>
                 </div>
             </fieldset>
             <br>
             <fieldset class="data-container-background">OTROS DATOS 
                 <div class="container-grid-form">
                     <div class="item-input field">
-                        <div class="control">
-                            <div id="tipoAutomotor" value="<?php echo $reg["tipo"] ?>" name="tipo" class="select is-info">
-                                <select id="tamanioTipoAutomotor" required>
-                                    <option value="" disabled selected hidden>Tipo</option>
+                        <div class="control" name="tipo">
+                            
+                            <div id="tipoAutomotor" class="select is-info">
+                                <select id="tamanioTipoAutomotor" name="tipo" required>
+                                    <option value="<?php echo $reg["tipo"] ?>" selected hidden><?php echo $reg["tipo"] ?></option>
                                     <option value="CAMIÓN">Camión</option>
                                     <option value="COMBI">Combi</option>
                                     <option value="MINIBUS">Minibus</option>
@@ -72,13 +74,14 @@
                                     <option value="UTILITARIO">Utilitario</option>
                                 </select>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="item-input field">
                         <div class="control">
-                            <div id="sedeAutomotor" selected="<?php echo $reg["dni"] ?>" name="sede" class="select is-info">
-                                <select id="tamanioSedeAutomotor" required>
-                                    <option value="" disabled selected hidden>Sede</option>
+                            <div id="sedeAutomotor" class="select is-info">
+                                <select id="tamanioSedeAutomotor" name="sede" required>
+                                    <option value="<?php echo $reg["sede"] ?>" selected hidden><?php echo $reg["sede"] ?></option>
                                     <option value="Capital">Capital</option>
                                     <option value="Aimogasta">Aimogasta</option>
                                     <option value="Catuna">Catuna</option>
@@ -101,12 +104,12 @@
             <br>
             <div class="field obs data-container-background">
                 <div class="control">
-                    <textarea class="textarea is-info" value="<?php echo $reg["observaciones"] ?>" name="observaciones" placeholder="Observaciones"></textarea>
+                    <input class="item-input input is-info" type="text" value="<?php echo $reg["observaciones"] ?>" name="observaciones" placeholder="Observaciones">
                 </div>
             </div>
 
             <div id="botonesLogistica" style="text-align:center">
-                <input class="button is-info is-rounded" name="Guardar" type="submit" id="submit" name="submit" value="Guardar"/>
+                <input class="button is-info is-rounded" name="update" type="submit" id="submit" value="Guardar"/>
                 <input class="button is-danger is-rounded" name="btncancelar" id="btncancelar" onClick="history.back()" value="Cancelar"/>
             </div>
 

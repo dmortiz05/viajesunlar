@@ -42,32 +42,33 @@
         <div class="menu menu-container-max">
             <?php 
             require "../../templates/dashboard.php";
-            require_once "../backend/dbconexion.php";
+            require "../backend/dbconexion.php";
             ?>
 
         </div>
 
         <?php 
-        $dni = $_GET["dni"];
-        $query = "SELECT * FROM chofer WHERE dni='$dni'";
+        $idchofer = $_GET["idchofer"];
+        $query = "SELECT * FROM chofer WHERE idchofer=$idchofer";
         $result = mysqli_query($link, $query);
         
         while ($reg = mysqli_fetch_array($result, MYSQLI_ASSOC)) { ?>
 
-        <form method="post" action="../backend/choferes/modificachofer.php?id=<?php echo $reg['dni']; ?>" role="form" class="data-container">
+        <form method="post" action="../backend/choferes/modificachofer.php" role="form" class="data-container">
             <fieldset class="data-container-background">DATOS PERSONALES
                 <div class="container-grid-form">        
                     <input class="item-input input is-info" value="<?php echo $reg["dni"] ?>" type="text" name="dni" placeholder="DNI" >
                     <input class="item-input input is-info" value="<?php echo $reg["apellido"] ?>" type="text" name="apellido" placeholder="Apellido">
                     <input class="item-input input is-info" value="<?php echo $reg["nombre"] ?>" type="text" name="nombre" placeholder="Nombre">
+                    <input class="item-input input is-info" value="<?php echo $reg["idchofer"] ?>" type="text" name="idchofer" placeholder="Nombre" hidden>
                       
                     <input class="item-input input is-info jsrequired" value="<?php echo $reg["direccion"] ?>" type="text" name="direccion" placeholder="Dirección">
                     <input class="item-input input is-info" value="<?php echo $reg["telefono"] ?>" type="text" name="telefono" placeholder="Teléfono">
                     <div class="item-input field">
                         <div class="control">
                             <div id="gruposanguineoChoferes" class="select is-info">
-                                <select id="gruposanguineo" value="<?php echo $reg["gruposanguineo"] ?>" name="gruposanguineo" class="form-control select-notfirst">
-                                    <option value="" disabled selected hidden>Grupo Sanguíneo</option>
+                                <select id="gruposanguineo" name="gruposanguineo" class="form-control select-notfirst">
+                                    <option value="<?php echo $reg["gruposanguineo"] ?>" selected hidden><?php echo $reg["gruposanguineo"] ?></option>
                                     <option value="0-">0-</option>
                                     <option value="0+">0+</option>
                                     <option value="A-">A-</option>
@@ -94,12 +95,12 @@
             <br>
             <div class="field obs data-container-background">
                 <div class="control">
-                    <textarea class="textarea is-info" value="<?php echo $reg["observaciones"] ?>" type="text" name="observaciones" placeholder="Observaciones"></textarea>
+                    <input class="item-input input is-info" value="<?php echo $reg["observaciones"] ?>" type="text" name="observaciones" placeholder="Observaciones">
                 </div>
             </div>
 
             <div id="botonesLogistica" style="text-align:center">
-                <input class="button is-info is-rounded" name="Guardar" type="submit" id="submit" name="submit" value="Guardar"/>
+                <input class="button is-info is-rounded" name="update" type="submit" id="submit" value="Guardar"/>
                 <input class="button is-danger is-rounded" name="btncancelar" id="btncancelar" onClick="history.back()" value="Cancelar"/>
             </div>
 

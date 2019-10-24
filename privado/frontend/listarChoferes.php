@@ -43,6 +43,7 @@
                 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                     <thead>
                         <tr>
+                            <th>#</th>
                             <th>DNI</th>
                             <th>Apellido</th>
                             <th>Nombre</th>

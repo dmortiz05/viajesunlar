@@ -40,7 +40,8 @@
             <?php require_once "../backend/dbconexion.php";?>
         </div>
         
-        <form method="post" action="../backend/automotores/cargaautomotores.php" role="form" class="data-container">
+        <!--<form method="post" action="../backend/automotores/cargaautomotores.php" role="form" class="data-container">-->
+        <form role="form" class="data-container">
             <fieldset class="data-container-background">DATOS DEL AUTOMOTOR
                 <div class="container-grid-form">
                     <input class="item-input input is-info" type="text" name="patente" placeholder="Patente" minlength="1" maxlength="8" >
@@ -53,8 +54,8 @@
                 <div class="container-grid-form">
                     <div class="item-input field">
                         <div class="control">
-                            <div id="tipoAutomotor" name="tipo" class="select is-info">
-                                <select id="tamanioTipoAutomotor" required>
+                            <div id="tipoAutomotor" class="select is-info">
+                                <select id="tamanioTipoAutomotor" name="tipo" class="form-control select-notfirst" required>
                                     <option value="" disabled selected hidden>Tipo</option>
                                     <option value="CAMIÓN">Camión</option>
                                     <option value="COMBI">Combi</option>
@@ -69,8 +70,8 @@
                     </div>
                     <div class="item-input field">
                         <div class="control">
-                            <div id="sedeAutomotor" name="sede" class="select is-info">
-                                <select id="tamanioSedeAutomotor" required>
+                            <div id="sedeAutomotor" class="select is-info">
+                                <select id="tamanioSedeAutomotor" name="sede" class="form-control select-notfirst" required>
                                     <option value="" disabled selected hidden>Sede</option>
                                     <option value="Capital">Capital</option>
                                     <option value="Aimogasta">Aimogasta</option>
@@ -94,7 +95,7 @@
             <br>
             <div class="field obs data-container-background">
                 <div class="control">
-                    <textarea class="textarea is-info" name="observaciones" placeholder="Observaciones"></textarea>
+                    <textarea class="textarea is-info" type="text" name="observaciones" placeholder="Observaciones"></textarea>
                 </div>
             </div>
 

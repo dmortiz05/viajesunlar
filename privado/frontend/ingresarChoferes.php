@@ -43,7 +43,8 @@
             <?php require "../../templates/dashboard.php";?>
             <?php require_once "../backend/dbconexion.php";?>
         </div>
-        <form method="post" action="../backend/choferes/cargachoferes.php" role="form" class="data-container">
+        <form role="form" class="data-container">
+        <!--<form method="post" action="../backend/choferes/cargachoferes.php" role="form" class="data-container">-->
                     <fieldset class="data-container-background">DATOS PERSONALES
                         <div class="container-grid-form">
                             <!--<input class="item-input input is-info" type="text" name="dni" placeholder="DNI" required pattern="[0-9]{8}" minlength="1" maxlength="8" >
