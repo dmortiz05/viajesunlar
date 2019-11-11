@@ -1,3 +1,6 @@
+<?php
+include "../backend/automotores/validacionesautomotores.php"
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,7 +25,7 @@
 </head>
 <body>
     <nav class="navbar nav-bar" role="navigation" aria-label="main navigation">
-        <?php require_once "../../templates/navbarPrivado.php"?>
+        <?php require_once "../../templates/navbarPrivado.php";?>
         <div id="navbarBasicExample" class="navbar-menu">
             <aside class="menu menu-container-min">
                 <?php require_once"../../templates/dashboard.php"?>
@@ -36,17 +39,23 @@
     </nav>
     <div class="container-grid">
         <div class="menu menu-container-max">
-            <?php require "../../templates/dashboard.php"?>
+            <?php require "../../templates/dashboard.php";?>
             <?php require_once "../backend/dbconexion.php";?>
         </div>
         
         <!--<form method="post" action="../backend/automotores/cargaautomotores.php" role="form" class="data-container">-->
-        <form role="form" class="data-container">
+        <form role="form" method="POST" class="data-container">
+        <span class = "text-danger"> <?php echo $patente_error ?></span>
+        <span class = "text-danger"> <?php echo $marca_error ?></span>
+        <span class = "text-danger"> <?php echo $modelo_error ?></span>
+        <span class = "text-danger"> <?php echo $tipo_error ?></span>
+        <span class = "text-danger"> <?php echo $sede_error ?></span>
+        <span class = "text-danger"> <?php echo $proximoservice_error ?></span>
             <fieldset class="data-container-background">DATOS DEL AUTOMOTOR
                 <div class="container-grid-form">
-                    <input class="item-input input is-info" type="text" name="patente" placeholder="Patente" minlength="1" maxlength="8" >
-                    <input class="item-input input is-info" type="text" name="marca" placeholder="Marca" required>
-                    <input class="item-input input is-info" type="text" name="modelo" placeholder="Modelo" required>
+                    <input class="item-input input is-info" type="text" name="patente" placeholder="Patente" >
+                    <input class="item-input input is-info" type="text" name="marca" placeholder="Marca" >
+                    <input class="item-input input is-info" type="text" name="modelo" placeholder="Modelo" >
                 </div>
             </fieldset>
             <br>
@@ -55,7 +64,7 @@
                     <div class="item-input field">
                         <div class="control">
                             <div id="tipoAutomotor" class="select is-info">
-                                <select id="tamanioTipoAutomotor" name="tipo" class="form-control select-notfirst" required>
+                                <select id="tamanioTipoAutomotor" name="tipo" class="form-control select-notfirst" >
                                     <option value="" disabled selected hidden>Tipo</option>
                                     <option value="CAMIÓN">Camión</option>
                                     <option value="COMBI">Combi</option>
@@ -71,7 +80,7 @@
                     <div class="item-input field">
                         <div class="control">
                             <div id="sedeAutomotor" class="select is-info">
-                                <select id="tamanioSedeAutomotor" name="sede" class="form-control select-notfirst" required>
+                                <select id="tamanioSedeAutomotor" name="sede" class="form-control select-notfirst">
                                     <option value="" disabled selected hidden>Sede</option>
                                     <option value="Capital">Capital</option>
                                     <option value="Aimogasta">Aimogasta</option>
@@ -88,7 +97,7 @@
                         </div>
                     </div>
                     <label for="">Próximo service
-                        <input class="item-input input is-info" type="date" name="proximoservice" placeholder="Vencimiento" required>
+                        <input class="item-input input is-info" type="date" name="proximoservice" placeholder="Vencimiento">
                     </label> 
                 </div>  
             </fieldset>

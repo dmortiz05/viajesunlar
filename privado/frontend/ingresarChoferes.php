@@ -1,3 +1,6 @@
+<?php
+include "../backend/choferes/validacioneschoferes.php"
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -43,7 +46,7 @@
             <?php require "../../templates/dashboard.php";?>
             <?php require_once "../backend/dbconexion.php";?>
         </div>
-        <form role="form" class="data-container">
+        <form role="form" method="POST" class="data-container">
         <!--<form method="post" action="../backend/choferes/cargachoferes.php" role="form" class="data-container">-->
                     <fieldset class="data-container-background">DATOS PERSONALES
                         <div class="container-grid-form">
@@ -54,12 +57,15 @@
                             <input class="item-input input is-info" type="text" name="direccion" placeholder="Dirección" required>
                             <input class="item-input input is-info" type="text" name="telefono" placeholder="Teléfono" pattern="[0-9]{10}" minlength="1" maxlength="10" required>-->
                             <input class="item-input input is-info" type="text" name="dni" placeholder="DNI" >
-                            <span class="text-danger"><?php print("Ingrese DNI") ; ?> </span>
+                                <span class = "text-danger"> <?php echo $dni_error ?></span>
                             <input class="item-input input is-info" type="text" name="apellido" placeholder="Apellido">
+                                <span class = "text-danger"> <?php echo $apellido_error ?></span>
                             <input class="item-input input is-info" type="text" name="nombre" placeholder="Nombre">
-                      
+                                <span class = "text-danger"> <?php echo $nombre_error ?></span>
                             <input class="item-input input is-info jsrequired" type="text" name="direccion" placeholder="Dirección">
+                                <span class = "text-danger"> <?php echo $direccion_error ?></span>
                             <input class="item-input input is-info" type="text" name="telefono" placeholder="Teléfono">
+                                <span class = "text-danger"> <?php echo $telefono_error ?></span>
                             <div class="item-input field">
                                 <div class="control">
                                     <div id="gruposanguineoChoferes" class="select is-info">
@@ -73,8 +79,9 @@
                                             <option value="B-">B-</option>
                                             <option value="B+">B+</option>
                                             <option value="AB-">AB-</option>
-                                            <option value="AB+">AB+</option>
+                                            <option value="AB+">AB+</option>                                         
                                         </select>
+                                        <span class = "text-danger"> <?php echo $gruposanguineo_error ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -86,10 +93,13 @@
                             <!--<input class="item-input input is-info" type="text" name="polizaseguro" placeholder="Póliza de seguro" required>
                             <input class="item-input input is-info" type="text" name="licencia" placeholder="Licencia" required>-->
                             <input class="item-input input is-info" type="text" name="polizaseguro" placeholder="Póliza de seguro">
+                                <span class = "text-danger"> <?php echo $polizaseguro_error ?></span>
                             <input class="item-input input is-info" type="text" name="licencia" placeholder="Licencia">
+                                <span class = "text-danger"> <?php echo $licencia_error ?></span>
                             <label for="">Fecha Vencimiento Licencia
                                 <!--<input class="item-input input is-info" type="date" name="vencimientocarnet" placeholder="Vencimiento" required>-->
                                 <input class="item-input input is-info" type="date" name="vencimientocarnet" placeholder="Vencimiento">
+                                    <span class = "text-danger"> <?php echo $vencimientocarnet_error ?></span>
                             </label> 
                         </div>  
                     </fieldset>

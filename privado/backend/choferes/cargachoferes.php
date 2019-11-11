@@ -21,5 +21,5 @@
 		'$licencia', '$vencimientocarnet', '$observaciones');
 		";
 		mysqli_query($link, $query);
-		header("Location: ../../frontend/ingresarChoferes.php");
+		header("Location: /privado/frontend/ingresarChoferes.php");
 ?>

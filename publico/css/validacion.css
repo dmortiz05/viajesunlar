@@ -1,0 +1,21 @@
+.i .input:focus,
+.textarea:focus,
+.select:focus {
+    background-color: #fff;
+}
+
+input.error,
+textarea.error,
+select.error {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid rgb(238, 70, 70) !important;
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    line-height: 1.5;
+    vertical-align: top
+}

@@ -17,5 +17,5 @@
 		);
 		";
 		mysqli_query($link, $query);
-		header("Location: ../../frontend/ingresarAutomotores.php");
+		header("Location: /privado/frontend/ingresarAutomotores.php");
 ?>

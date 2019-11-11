@@ -12,11 +12,14 @@
 
 		<link rel="stylesheet" type="text/css" href="../../publico/css/bulma.min.css">
 		<link rel="stylesheet" type="text/css" href="../../publico/css/indexcarga.css">
+		<link rel="stylesheet" type="text/css" href="../../publico/css/validacion.css">
+		<link rel="stylesheet" type="text/css" href="../../publico/css/solicitudViaje.css">
 		<link rel="stylesheet" type="text/css" href="../../publico/css/styleNavBar.css">
 		<link rel="stylesheet" type="text/css" href="../../publico/css/footer.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script src="../../publico/js/validacion.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('#editarOtros').on('click', function() {
@@ -75,30 +78,30 @@
 
 				<form class="formularios">
 
-					<input  id="motivoViaje" class="item-input input is-info"  name="motivoViaje" placeholder="Motivo del Viaje" type="text" maxlength="" title="Campo Obligatorio" required>
+					<input  id="motivoViaje" class="item-input input is-info"  name="motivoViaje" placeholder="Motivo del Viaje" type="text" readonly="readonly" title="Campo Obligatorio">
 
-						<div id="sedeViaje" class="select is-info">
-							<select id="tamagnioSede" class="is-hovered" name="sedeUni" placeholder="Sede Universitaria" title="Campo Obligatorio" required>
-									<option value="Aimogasta">Sede Aimogasta</option>
-									<option value="Capital">Sede Capital</option>
-									<option value="Catuna">Sede Catuna</option>
-									<option value="Chamical">Sede Chamical</option>
-									<option value="Chepes">Sede Chepes</option>
-									<option value="Villa Union">Sede Villa Unión</option>
-							</select>
-						</div>
+						
+					<input id="sedeViaje" class="item-input input is-info is-hovered" name="sedeUni" placeholder="Sede Universitaria" readonly="readonly" title="Campo Obligatorio">
+				
 
-					<input id="destinoViaje" class="item-input input is-info"  name="destProvincia" placeholder="Provincia de destino" type="text" maxlength="70" title="Campo Obligatorio" required>
+					<input id="destinoViaje" class="item-input input is-info"  name="destProvincia"  readonly="readonly" placeholder="Provincia de destino" type="text" title="Campo Obligatorio">
 
-					<input id="destinoViaje" class="item-input input is-info"  name="destLocalidad" placeholder="Localidad de destino" type="text" maxlength="70" title="Campo Obligatorio" required>
+					<input id="destinoViaje" class="item-input input is-info"  name="destLocalidad" readonly="readonly" placeholder="Localidad de destino" type="text" title="Campo Obligatorio">
 
 					<p id="textosFechas">Fecha de Salida:</p>
-					<input id="fechaViaje" class="item-input input is-info"  name="fechaSalida" type="date" title="Campo Obligatorio" required>
+					<input id="fechaViaje" class="item-input input is-info"  name="fechaSalida" type="text" readonly="readonly" title="Campo Obligatorio" required>
 
 					<p id="textosFechas">Fecha de Regreso:</p>
-					<input id="fechaViaje" class="item-input input is-info"  name="fechaRegreso" type="date" title="Campo Obligatorio" required>
+					<input id="fechaViaje" class="item-input input is-info"  name="fechaRegreso" type="text"  readonly="readonly" title="Campo Obligatorio" required>
 
-					<textarea id="observacionViaje"  class="item-input textarea is-info" name="observionesViaje" placeholder="Observaciones"></textarea>
+                    <input id="responsableViaje" class="item-input input is-info"  name="reprViaje" readonly="readonly" placeholder="Representante del Viaje" type="text" maxlength="70" title="Campo Obligatorio" required>
+
+                    <input id="carreraViaje" class="item-input input is-info"  name="carrViaje" readonly="readonly" placeholder="Carrera/Carreras" type="text" maxlength="70" title="Campo Obligatorio" required>
+
+                    <p id="textoCantidad">Cantidad de Pasajeros:</p>
+                    <input id="cantidadPasajerosViaje" class="item-input input is-info"  readonly="readonly"  name="cantiPasaViaje"  type="number" maxlength="3" title="Campo Obligatorio" required>
+
+					<textarea id="observacionViaje"  class="item-input textarea is-info" readonly="readonly" name="observionesViaje" placeholder="Observaciones"></textarea>
 
 				</form>		
 		</div>
@@ -109,7 +112,7 @@
 		
 					<p id="textoBuscarDNI">Buscar por DNI:</p>
 					<div class="control has-icons-left has-icons-right">
-						<input id="busquedaEncargado" class="item-input input is-info" type="text" placeholder="Buscar por DNI" >
+						<input id="busquedaEncargado" class="item-input input is-info" type="text" placeholder="Buscar por DNI" onblur="revisaLongitudMax(this,8),revisaNumero(this),revisaEspacio(this)" onkeyup="revisaLongitudMax(this,8),revisaNumero(this),revisaEspacio(this)">
 						<span class="icon is-left">
 							<i class="fas fa-search"></i>
 						</span>
@@ -175,19 +178,19 @@
 
 					<tbody>
 						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td>Laila Maria Esmeralda Fulanita</td>
+							<td>Benejam Mercado</td>
+							<td>3822126</td>
+							<td>lkjo23456</td>
 							<td><a id="opacidad"><i id="opacidad" class="far fa-edit"></i></a></td>
 							<td><a id="opacidad"><i class="far fa-trash-alt"></i></a></td>
 						</tr>
 
 						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td>jfahfhsakdfhdjkah fhdajfhjdhajklfhdahfjsajhf jkdshfhdsklflashlahlkah</td>
+							<td>fjdshajfhjldshafl hsldjhfjsdhfhsdjfdhjhfjk dshfshdhfuewrewi urewyrwu</td>
+							<td>38221926</td>
+							<td>jfkdsahfdsahfdsjahsahhakfhlsdas</td>
 							<td><a id="opacidad"><i id="opacidad" class="far fa-edit"></i></a></td>
 							<td><a id="opacidad"><i class="far fa-trash-alt"></i></a></td>
 						</tr>
@@ -206,7 +209,7 @@
 					<button id="editarDocentes" class="button is-rounded estilo">Editar Docente o No Docente </button>
 					<button id="open3" class="button is-rounded estilo">Agregar Otros </button>
 					<button id="editarOtros" class="button is-rounded estilo">Editar Otros </button>
-				</div>
+	</div>
 				<div id="popup" style="display: none;">
 					<div class="content-popup">
 						<div class="close"><a href="#" id="close"><i class="far fa-times-circle"></i></a></div>
@@ -596,7 +599,7 @@
 		</div>
 
 
-		    <div id="botton2"> <a id="agregar2" class="button is-rounded">Enviar Solicitud del Viaje</a> </div>
+		    <div id="botton2"> <a id="agregar2" class="button is-rounded">Guardar datos del Viaje</a> </div>
 
 		     <?php require_once "../../templates/footer.php" ?>
 		

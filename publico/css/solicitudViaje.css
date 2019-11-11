@@ -1,0 +1,159 @@
+body {
+    overflow-x: hidden;
+}
+
+
+/* FORMULARIOS */
+
+.formularios {
+    float: none;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-bottom: 15px;
+    width: 80%;
+    clear: both;
+    padding: 30px;
+    box-shadow: 0px 2px 2px #000;
+    -moz-box-shadow: 0px 2px 2px #000;
+    -webkit-box-shadow: 0px 2px 2px #000;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: rgb(240, 244, 248);
+}
+
+#contenedor {
+    display: grid;
+    grid-template-columns: 20fr 1fr;
+}
+
+#titulo {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 40px;
+    color: #260B17;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#subtitulo {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 25px;
+    color: #260B17;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#opacidad {
+    opacity: 0.8;
+}
+
+#opacidad a:hover {
+    opacity: 1;
+}
+
+
+/* FORMULARIO DATOS DEL VIAJE */
+
+#motivoViaje {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #209CEE;
+}
+
+#sedeViaje {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#tamagnioSede {
+    width: 250px;
+    border: 1px solid #209CEE;
+}
+
+#tamagnioProvincia {
+    width: 250px;
+    border: 1px solid #209CEE;
+}
+
+#tamagnioLocalidad {
+    width: 250px;
+    border: 1px solid #209CEE;
+}
+
+#destinoViaje {
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#textosFechas {
+    float: left;
+    width: 150px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#fechaViaje {
+    float: left;
+    width: 250px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#responsableViaje {
+    width: 400px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#carreraViaje {
+    width: 613px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#textoCantidad {
+    float: left;
+    width: 170px;
+    margin-top: 8px;
+    margin-left: 15px;
+}
+
+#cantidadPasajerosViaje {
+    float: left;
+    width: 150px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#observacionViaje {
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/*GENERAL*/
+
+#botton2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#agregar2 {
+    float: none;
+    background: #42C576;
+    border-color: #42C576;
+    font-family: Roboto;
+    font-size: 20px;
+    color: #260B17;
+    opacity: 0.5;
+}
+
+#botton2 button:hover {
+    opacity: 1;
+}
