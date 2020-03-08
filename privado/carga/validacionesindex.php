@@ -177,7 +177,7 @@ if(isset ($_POST["agregarPasajeroAlumno"]))
     
     if(empty($_POST["dniPasajeroAlumno"]))
     {
-    $dniPasajero_error = "<p>Ingrese un DNI </p>";
+    $dniPasajeroAlumno_error = "<p>Ingrese un DNI </p>";
     }     
     else
     {
@@ -255,7 +255,8 @@ if(isset ($_POST["agregarPasajeroAlumno"]))
         if(!preg_match("/^[a-zA-Z]*$/", $_POST["codigoMatriculaPasajeroAlumno"]))
         {
         $codigoMatriculaPasajeroAlumno_error= "<p>Ingrese un codigo correcto</p>";
-        {
+        } 
+    }
             //NUMERO DE MATRICULA ALUMNO//
     
     if(empty($_POST["numeroMatriculaPasajeroAlumno"]))
@@ -423,7 +424,7 @@ if(isset ($_POST["agregarPasajeroDocente"]))
     
 }
 
-                                //VALIDACION---ALUMNO O GRADUADO//
+                                //VALIDACION---OTROS//
 
 $nombrePasajeroOtro_error='';
 $apellidoPasajeroOtro_error ='';
@@ -438,131 +439,139 @@ $razonViajePasajeroOtro_error='';
 
 if(isset ($_POST["agregarPasajeroOtro"]))
 {
-        
-}
 
-/*if(isset ($_POST["submit"]))
-{
+            //NOMBRE OTROS//
 
-            //MOTIVO DE VIAJE//
-
-    if(empty($_POST["motivoviaje"]))
+    if(empty($_POST["nombrePasajeroOtro"]))
     {
-    $motivoviaje_error = "<p>Ingrese un motivo de viaje </p>";
-    }
-    else
-    {
-    $motivoviaje_error = "";
-    }
-            //SEDE//
-
-    if(empty($_POST["sedeorigen"]))
-    {
-    $sedeorigen_error = "<p>seleccione una sede</p>";
+    $nombrePasajeroOtro_error = "<p>Ingrese un nombre</p>";
     }  
     else
     {
-    $sedeorigen_error = "";
-    }
-            //PROVINCIA DE DESTINO//
-
-    if(empty($_POST["destinoprovincia"]))
-    {
-    $destinoprovincia_error = "<p>Ingrese una provincia</p>";
-    }  
-    else
-    {
-        if(!preg_match("/^[a-zA-Z ]*$/", $_POST["destinoprovincia"]))
+        if(!preg_match("/^[a-zA-Z ]*$/", $_POST["nombrePasajeroOtro"]))
         {
-        $destinoprovincia_error= "<p>Ingrese una provincia</p>";
+        $nombrePasajeroOtro_error= "<p>Ingrese un nombre correcto</p>";
         }
     }   
+            //APELLIDO OTROS//
 
-            //LOCALIDAD DE DESTINO//
-
-    if(empty($_POST["destinolocalidad"]))
+    if(empty($_POST["apellidoPasajeroOtro"]))
     {
-    $destinolocalidad_error = "<p>Ingrese una localidad</p>";
+    $apellidoPasajeroOtro_error = "<p>Ingrese un apellido</p>";
     }  
     else
     {
-        if(!preg_match("/^[a-zA-Z ]*$/", $_POST["destinolocalidad"]))
+        if(!preg_match("/^[a-zA-Z ]*$/", $_POST["apellidoPasajeroOtro"]))
         {
-        $destinolocalidad_error= "<p>Ingrese una localidad</p>";
+        $apellidoPasajeroOtro_error= "<p>Ingrese un apellido correcto</p>";
         }
-    }
-            //FECHA DE SALIDA//
-
-    if(empty($_POST["fechasalida"]))
+    }   
+            //DNI OTROS//
+    
+    if(empty($_POST["dniPasajeroOtro"]))
     {
-    $fechasalida_error = "<p>Seleccione una fecha</p>";
-    }  
-    else
-    {
-    $fechasalida_error = "";
-    }  
-            //FECHA DE REGRESO//
-
-    if(empty($_POST["fecharegreso"]))
-    {
-    $fecharegreso_error = "<p>Seleccione una fecha</p>";
-    }  
-    else
-    {
-    $fecharegreso_error = "";
-    }  
-            //REPRESENTANTE DE VIAJE//
-
-    if(empty($_POST["representanteviaje"]))
-    {
-    $representanteviaje_error = "<p>Ingrese una provincia</p>";
-    }  
-    else
-    {
-        if(!preg_match("/^[a-zA-Z ]*$/", $_POST["representanteviaje"]))
-        {
-        $representanteviaje_error= "<p>Ingrese un nombre de representante</p>";
-        }
-    } 
-            //CARRERA//
-
-    if(empty($_POST["carrera"]))
-    {
-    $carrera_error = "<p>Ingrese carrera/s</p>";
-    }  
-    else
-    {
-        if(!preg_match("/^[a-zA-Z ]*$/", $_POST["carrera"]))
-        {
-        $carrera_error= "<p>Ingrese carrera/s</p>";
-        }
-    }
-            //CANTIDAD DE PASAJEROS//
-
-    if(empty($_POST["cantidadpasajero"]))
-    {
-    $cantidadpasajero_error = "<p>Ingrese cantidad de pasajeros </p>";
+    $dniPasajeroOtro_error = "<p>Ingrese un DNI </p>";
     }     
     else
     {
-        if(is_numeric($_POST["cantidadpasajero"]))  
+        if(is_numeric($_POST["dniPasajeroOtro"]))  
         {
-        $cantidadpasajero_error= "";
+        $dniPasajeroOtro_error= "";
         }
         else
         {
-        $cantidadpasajero_error="<p>ingrese una cantidad corrcta </p>";
+        $dniPasajeroOtro_error="<p>ingrese un DNI correcto </p>";
         }
-    }            
-            //CARGA//
-    
-    if ($motivoviaje_error=="" && $sedeorigen_error=="" && $destinoprovincia_error=="" && 
-    $destinolocalidad_error=="" && $fechasalida_error=="" && $fecharegreso_error=="" && $representanteviaje_error==""
-    && $carrera_error=="" && $cantidadpasajero_error=="")
+    }     
+           //FECHA NACIMIENTO OTROS//
+
+    if(empty($_POST["fechaNacimientoPasajeOtro"]))
     {
-    require "cargasolicitud.php";
+    $fechaNacimientoPasajeOtro_error = "<p>Seleccione una fecha de nacimiento</p>";
+    }
+            //GRUPO SANGUINEO OTROS//
+    
+    if(empty($_POST["tamanioGrupoSanguineoOtro"]))
+    {
+    $tamanioGrupoSanguineoOtro_error = "<p>Seleccione un grupo sanguineo</p>";
+    }  
+    else
+    {
+    $tamanioGrupoSanguineoOtro_error = "";
+    }
+           //TELEFONO OTROS//
+
+    if(empty($_POST["telefonoPasajeroOtro"]))
+    {
+    $telefonoPasajeroOtro_error = "<p>Ingrese un telefono </p>";
+    }     
+    else
+    {
+        if(is_numeric($_POST["telefonoPasajeroOtro"]))  
+        {
+        $telefonoPasajeroOtro_error= "";
+        }
+        else
+        {
+        $telefonoPasajeroOtro_error="<p>ingrese un telefono correcto </p>";
+        }
+    }    
+            //DIRECCION OTROS//
+
+    if(empty($_POST["direccionPasajeroOtro"]))
+    {
+    $direccionPasajeroOtro_error = "<p>Ingrese una direccion</p>";
+    }
+    else
+    {
+    $direccionPasajeroOtro_error = "";
+    }
+            //SEGURADORA OTRAS//
+
+    if(empty($_POST["aseguradoraPasajeroOtro"]))
+    {
+    $aseguradoraPasajeroOtro_error = "<p>Ingrese una aseguradora</p>";
+    }
+    else
+    {
+    $aseguradoraPasajeroOtro_error = "";
+    }
+            //POLIZA OTROS//
+
+    if(empty($_POST["polizaPasajeroOtro"]))
+    {
+    $polizaPasajeroDocente_error = "<p>Ingrese una poliza </p>";
+    }
+    else
+    {
+        if(is_numeric($_POST["polizaPasajeroOtro"]))  
+        {
+        $polizaPasajeroOtro_error= "";
+        }
+        else
+        {
+        $polizaPasajeroOtro_error="<p>Ingrese una poliza correcta </p>";
+        }
+    }
+            // RAZON VIAJE OTROS//
+
+    if(empty($_POST["razonViajePasajeroOtro"]))
+    {
+    $razonViajePasajeroOtro_error = "<p>Ingrese una razon de viaje</p>";
+    }
+    else
+    {
+    $razonViajePasajeroOtro_error = "";
+    }
+            //CARGA DE DATOS DOCENTE O NO DOCENTE//
+    
+    if ($nombrePasajeroOtro_error=="" && $apellidoPasajeroOtro_error=="" && $dniPasajeroOtro_error=="" && 
+    $fechaNacimientoPasajeOtro_error=="" && $tamanioGrupoSanguineoOtro_error=="" && $telefonoPasajeroOtro_error=="" && $direccionPasajeroOtro_error==""
+    && $aseguradoraPasajeroOtro_error=="" && $polizaPasajeroOtro_error=="" && $razonViajePasajeroOtro_error=="")
+    {
+
     }
 
-}*/
+}
 
 ?>

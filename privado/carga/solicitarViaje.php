@@ -101,13 +101,15 @@ include "../backend/solicitudes/validacionessolicitudes.php"
 
 					<p id="textosFechas">Fecha de Regreso:</p>
 					<input id="fechaViaje" class="item-input input is-info"  name="fecharegreso" type="date" onblur="revisar(this)" onkeyup="revisar(this)" title="Campo Obligatorio">
+					
+					<div id="responsableViaje">
+                    	<input class="item-input input is-info" name="representanteviaje" placeholder="Representante del Viaje" type="text" onblur="revisar(this),revisaLongitudMax(this,100),revisaEspacio(this),revisaLetras(this)" onkeyup="revisar(this),revisaLongitudMax(this,100),revisaEspacio(this),revisaLetras(this)" title="Campo Obligatorio">
+					</div>
 
-                    <input id="responsableViaje" class="item-input input is-info"  name="representanteviaje" placeholder="Representante del Viaje" type="text" onblur="revisar(this),revisaLongitudMax(this,100),revisaEspacio(this)" onkeyup="revisar(this),revisaLongitudMax(this,100),revisaEspacio(this)" title="Campo Obligatorio">
-
-                    <input id="carreraViaje" class="item-input input is-info"  name="carrera" placeholder="Carrera/Carreras" type="text" maxlength="70" onblur="revisar(this),revisaLongitudMax(this,255),revisaEspacio(this)" onkeyup="revisar(this),revisaLongitudMax(this,255),revisaEspacio(this)" title="Campo Obligatorio">
+                    <input id="carreraViaje" class="item-input input is-info"  name="carrera" placeholder="Carrera/Carreras" type="text" maxlength="70" onblur="revisar(this),revisaLongitudMax(this,255),revisaEspacio(this),revisaLetras(this)" onkeyup="revisar(this),revisaLongitudMax(this,255),revisaEspacio(this),revisaLetras(this)" title="Campo Obligatorio">
 
                     <p id="textoCantidad">Cantidad de Pasajeros:</p>
-                    <input id="cantidadPasajerosViaje" class="item-input input is-info"  name="cantidadpasajero"  type="text" maxlength="3" onblur="revisar(this),revisaLongitudMax(this,3),revisaNumero(this),revisaEspacio(this)" onkeyup="revisar(this),revisaLongitudMax(this,3),revisaNumero(this),revisaEspacio(this)" title="Campo Obligatorio" >
+                    <input id="cantidadPasajerosViaje" class="item-input input is-info"  name="cantidadpasajero"  type="text" maxlength="3" onblur="revisar(this),revisaNumero(this),revisaEspacio(this)" onkeyup="revisar(this),revisaNumero(this),revisaEspacio(this)" title="Campo Obligatorio" >
 
 					<textarea id="observacionViaje"  class="item-input textarea is-info" name="observaciones" placeholder="Observaciones" maxlength="255"></textarea>
 					<div id="botton2">

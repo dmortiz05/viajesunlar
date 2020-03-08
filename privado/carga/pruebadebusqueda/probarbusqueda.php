@@ -19,38 +19,51 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
+		<link rel="stylesheet" type="text/css" href="style.css" />
+    	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery.autocomplete.js"></script>
+		
+		<script> 
+        	jQuery(function(){ 
+        		$("#busquedaEncargado").autocomplete("buscar.php");
+        	});
+    	</script>
+
 
 	</head>
 
 	<body>
 
-		<?php require_once "../../../templates/navbarPublico.php" ?>
+		<?php 
+			require_once "../../../templates/navbarPublico.php"; 
+			require "../../backend/dbconexion.php";
+		?>
 
 
 		<div>
-			<h2 id="titulo"> Datos del Encargado</h2>
+			<h2 id="titulo">Datos del Encargado</h2>
 			<div class ="formularios">
 
-				<form method="POST" role="form" action="seleccionaencargado.php" >
+				<form role="form" method="POST">
 		
 					<p id="textoBuscarDNI">Buscar por DNI:</p>
 					<div class="control has-icons-left has-icons-right">
-						<input id="busquedaEncargado" class="item-input input is-info" type="text" autocomplete="on" placeholder="Buscar por DNI" >
+						<input id="busquedaEncargado" class="item-input input is-info" type="text" name="q" placeholder="DNI" name="buscar">
 						<span class="icon is-left">
 							<i class="fas fa-search"></i>
 						</span>
-						<button id="buscar" class="button is-info is-rounded center-button" name="search">Buscar</button>
+						<button id="botonBuscar" class="button is-rounded estilo"><i class="fas fa-search"></i></button>
+						
 					</div>
 				</form>
 
-			
 				<form name="datosDelEncargado">
-				
+
 				<p id="textoBuscarDNI">Datos:</p>
 				
 					<input id="nombreEncargado" class="item-input input is-info" name="nombreEncargado" type="text" placeholder="Nombre" maxlength="30" required title="Campo Obligatorio" required>
 			
-					<input id="apellidoEncargado" class="item-input input is-info" name="apellidoEncargado" type="text" placeholder="Apellido" maxlength="30" title="Campo Obligatorio" required>
+					<input id="apellidoEncargado" class="item-input input is-info" name="apellidoEncargado" type="text" placeholder="Apellidos" maxlength="30" title="Campo Obligatorio" required>
 
 					<input id="dniEncargado" class="item-input input is-info" name="dniencargado" type="text" placeholder="DNI" maxlength="30" required pattern="[0-9]{8}" minlength="1" maxlength="8">
 					
@@ -62,7 +75,7 @@
 
 					<div id="grupoSanguineoEncargado" class="item-input select is-info" maxlength="3" title="Campo Obligatorio" required>
 						<select  id="tamagnioGrupoSanguineo"class="is-hovered" name="grupoSanguineoEncargado" id="grup">
-								<option>Grupo Sanguineo</option>
+								<option>Grupo Sanguíneo</option>
 								<option value="0-">0-</option>
 								<option value="0+">0+</option>
 								<option value="A-">A-</option>
@@ -74,10 +87,13 @@
 						</select>
 					</div>
 
-					<input id="polizaEncargado" class="item-input input is-info" type="text" name="polizaEncargado" placeholder="Número de Poliza" maxlength="10" title="Campo Obligatorio" required>
+					<input id="polizaEncargado" class="item-input input is-info" type="text" name="polizaEncargado" placeholder="Número de Póliza" maxlength="10" title="Campo Obligatorio" required>
 
 					<input id="observacionEncargado" class="item-input input is-info" type="text" name="observionesEncargado" placeholder="Observaciones">
+				
 				</form>
+				
+				
 
 					<div id="botton">
 						<button id="agregarEncargado" class="button is-rounded estilo"><i class="fas fa-user-plus"></i></button>
@@ -94,37 +110,38 @@
 							<th id="tamanioNombreApellido">Nombre</th>
 							<th id="tamanioNombreApellido">Apellido</th>
 							<th id="tamanioDniPoliza">DNI</th>
-							<th id="tamanioDniPoliza">Poliza</th>
+							<th id="tamanioDniPoliza">Póliza</th>
 							<th id="tamanioIconos"></th>
 							<th id="tamanioIconos"></th>
 						</tr>
 					</thead>
 
+					<?php
+						$query = "SELECT * from encargadodeviaje WHERE idviaje ORDER BY idencargadodeviaje ASC";
+						$result = mysqli_query($link, $query);
+					?>
+
 					<tbody>
+						<?php 
+							while ($reg = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+						?>
 						<tr>
-							<td>Laila Maria Esmeralda Fulanita</td>
-							<td>Benejam Mercado</td>
-							<td>3822126</td>
-							<td>lkjo23456</td>
+							<td><?php echo $reg['nombre'];?></td>
+							<td><?php echo $reg['apellido'];?></td>
+							<td><?php echo $reg['dni'];?></td>
+							<td><?php echo $reg['polizaseguro'];?></td>
 							<td><a id="opacidad"><i id="opacidad" class="far fa-edit"></i></a></td>
 							<td><a id="opacidad"><i class="far fa-trash-alt"></i></a></td>
 						</tr>
 
-						<tr>
-							<td>jfahfhsakdfhdjkah fhdajfhjdhajklfhdahfjsajhf jkdshfhdsklflashlahlkah</td>
-							<td>fjdshajfhjldshafl hsldjhfjsdhfhsdjfdhjhfjk dshfshdhfuewrewi urewyrwu</td>
-							<td>38221926</td>
-							<td>jfkdsahfdsahfdsjahsahhakfhlsdas</td>
-							<td><a id="opacidad"><i id="opacidad" class="far fa-edit"></i></a></td>
-							<td><a id="opacidad"><i class="far fa-trash-alt"></i></a></td>
-						</tr>
+						<?php }?>
 					</tbody>
 				</table>
 			</div>
 		</div>
 
 		
-		    <div id="botton2"> <a id="agregar2" class="button is-rounded">Guardar datos del Viaje</a> </div>
+		    <div id="botton2"> <a id="agregar2" class="button is-rounded">Guardar datos del viaje</a> </div>
 
 		     <?php require_once "../../../templates/footer.php" ?>
 		

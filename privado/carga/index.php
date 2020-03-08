@@ -1,3 +1,7 @@
+<?php
+include "validacionesindex.php"
+?>
+
 <!DOCTYPE html>
 <html>
 	
@@ -107,12 +111,21 @@
 		</div>
 
 		<div>
+			<span class = "text-danger"> <?php echo $nombreEncargado_error ?></span>
+			<span class = "text-danger"> <?php echo $apellidoEncargado_error ?></span>
+			<span class = "text-danger"> <?php echo $dniencargado_error ?></span>
+			<span class = "text-danger"> <?php echo $telefonoEncargado_error ?></span>
+			<span class = "text-danger"> <?php echo $direccionEncargado_error ?></span>
+			<span class = "text-danger"> <?php echo $emailEncargado_error ?></span>
+			<span class = "text-danger"> <?php echo $tamagnioGrupoSanguineo_error ?></span>
+			<span class = "text-danger"> <?php echo $polizaEncargado_error ?></span>
+
 			<h2 id="titulo"> Datos del Encargado</h2>
 			<div class ="formularios">
 		
 					<p id="textoBuscarDNI">Buscar por DNI:</p>
 					<div class="control has-icons-left has-icons-right">
-						<input id="busquedaEncargado" class="item-input input is-info" type="text" placeholder="Buscar por DNI" onblur="revisaLongitudMax(this,8),revisaNumero(this),revisaEspacio(this)" onkeyup="revisaLongitudMax(this,8),revisaNumero(this),revisaEspacio(this)">
+						<input id="busquedaEncargado" class="item-input input is-info" type="text" placeholder="Buscar por DNI" onblur="revisaLongitudMax(this,8),revisaEspacio(this)" onkeyup="revisaLongitudMax(this,8),revisaEspacio(this)">
 						<span class="icon is-left">
 							<i class="fas fa-search"></i>
 						</span>
@@ -120,11 +133,11 @@
 			
 
 			
-				<form name="datosDelEncargado">
+				<form method="POST" name="datosDelEncargado" >
 				
 				<p id="textoBuscarDNI">Datos:</p>
 				
-					<input id="nombreEncargado" class="item-input input is-info" name="nombreEncargado" type="text" placeholder="Nombre" maxlength="30" required title="Campo Obligatorio" required>
+					<input id="nombreEncargado" class="item-input input is-info" name="nombreEncargado" type="text" placeholder="Nombre" maxlength="30" required title="Campo Obligatorio" onblur="revisar(this),revisaLongitudMax(this,100),revisaEspacio(this),revisaLetras(this)" onkeyup="revisar(this),revisaLongitudMax(this,100),revisaEspacio(this),revisaLetras(this)">
 			
 					<input id="apellidoEncargado" class="item-input input is-info" name="apellidoEncargado" type="text" placeholder="Apellido" maxlength="30" title="Campo Obligatorio" required>
 
@@ -153,11 +166,11 @@
 					<input id="polizaEncargado" class="item-input input is-info" type="text" name="polizaEncargado" placeholder="Número de Poliza" maxlength="10" title="Campo Obligatorio" required>
 
 					<input id="observacionEncargado" class="item-input input is-info" type="text" name="observionesEncargado" placeholder="Observaciones">
-				</form>
-
+				
 					<div id="botton">
-						<button id="agregarEncargado" class="button is-rounded estilo"><i class="fas fa-user-plus"></i></button>
+						<button id="agregarEncargado"  class="button is-rounded estilo"><i class="fas fa-user-plus"></i></button>
 					</div>
+				</form>
 			</div>
 		</div>
 
